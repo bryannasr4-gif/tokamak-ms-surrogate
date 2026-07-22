@@ -1,5 +1,5 @@
-<!-- DOI badge (filled at release / S0.4): -->
-[![DOI](https://img.shields.io/badge/DOI-pending-lightgrey.svg)](https://doi.org/PENDING)
+<!-- DOI badge (Zenodo concept DOI, all versions): -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21499720.svg)](https://doi.org/10.5281/zenodo.21499720)
 
 # tokamak-ms-surrogate
 
