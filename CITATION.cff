@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+title: "tokamak-ms-surrogate: a differentiable vertical-stability-margin (m_s) surrogate for MAST-U (dataset + code)"
+abstract: >-
+  A learned, amortized, differentiable surrogate for the Portone-2005 vertical
+  stability margin m_s of a spherical tokamak (MAST-U), whose gradient is used to
+  drive solver-confirmed shape design, on open FreeGSNKE data. Includes the
+  synthetic training dataset, verified numerical artifacts, and figures.
+type: software
+authors:
+  - family-names: "Nasr"
+    given-names: "Bryan"
+version: "0.1.0"
+date-released: "2026-07-21"
+license: MIT
+keywords:
+  - tokamak
+  - vertical stability
+  - stability margin
+  - MAST-U
+  - FreeGSNKE
+  - machine learning
+  - differentiable surrogate
+  - spherical tokamak
+references:
+  - type: article
+    authors:
+      - family-names: "Portone"
+        given-names: "A."
+    title: "The stability margin of elongated plasmas"
+    journal: "Nuclear Fusion"
+    volume: "45"
+    year: 2005
+    doi: "10.1088/0029-5515/45/8/021"
+  - type: article
+    authors:
+      - family-names: "Humphreys"
+        given-names: "D. A."
+    title: "Experimental vertical stability studies for ITER performance and design guidance"
+    journal: "Nuclear Fusion"
+    volume: "49"
+    year: 2009
+  - type: article
+    authors:
+      - family-names: "Amorisco"
+        given-names: "N. C."
+    title: "FreeGSNKE: A Python-based dynamic free-boundary toroidal plasma equilibrium solver"
+    journal: "Physics of Plasmas"
+    volume: "31"
+    year: 2024
+    doi: "10.1063/5.0188467"

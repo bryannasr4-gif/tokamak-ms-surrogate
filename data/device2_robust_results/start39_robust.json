@@ -1,0 +1,1 @@
+{"start_id": 39, "design": "robust", "cohort": "replication", "band": "mid_band", "ms40_start": 0.8043075234735964, "center_ms": 0.0, "pert_ms": [0.0, 0.0, 0.0, 0.0, 3.1230110626669942, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "sigma_rel": "coil3%/paxis5%/Ip3%/fvac.02/alpha.05", "M": 16}

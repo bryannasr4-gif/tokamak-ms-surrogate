@@ -1,0 +1,34 @@
+{
+  "purpose": "fair-CMA control vs adversarial finding cma-starved-too-few-generations",
+  "configs": [
+    "cma_pop6_b30 (fair popsize 6, equal budget 30, graded penalty)",
+    "cma_pop6_b60 (fair popsize 6, 2x budget 60, graded penalty)"
+  ],
+  "marginal_regime": {
+    "cma_pop6_b30": {
+      "reach_k": 5,
+      "reach_n": 10,
+      "median_solves_among_reachers": 24.0,
+      "budget": 30,
+      "popsize": 6
+    },
+    "cma_pop6_b60": {
+      "reach_k": 9,
+      "reach_n": 10,
+      "median_solves_among_reachers": 26.0,
+      "budget": 60,
+      "popsize": 6
+    },
+    "surrogate_main_b30": {
+      "reach_k": 9,
+      "reach_n": 10,
+      "median_solves_among_reachers": 6.0
+    },
+    "default_cma_main_b30": {
+      "reach_k": 4,
+      "reach_n": 10,
+      "median_solves_among_reachers": 20.0
+    }
+  },
+  "conclusion": "At equal budget a fair-popsize CMA reaches only 5/10 marginal (vs surrogate 9/10). With 2x budget fair-CMA reaches 9/10 too -> the REACH gap was partly a budget artifact. BUT the EFFICIENCY gap is robust: fair-CMA needs median 26 expensive solves vs the surrogate's 6 (~4x) -> NOT a starvation artifact. The contribution is solve-EFFICIENCY, not unique capability."
+}

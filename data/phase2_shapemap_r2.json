@@ -1,0 +1,22 @@
+{
+ "kappa": 0.993,
+ "delta": 0.565,
+ "delta_upper": 0.469,
+ "delta_lower": 0.591,
+ "sq_uo": 0.988,
+ "sq_ui": -0.477,
+ "sq_lo": 0.988,
+ "sq_li": -0.088,
+ "Rgeo": 0.995,
+ "a": 0.995,
+ "aspect": 0.995,
+ "Rmag": 0.995,
+ "Zaxis": 0.946,
+ "gap_min": 0.982,
+ "gap_inner": 0.994,
+ "gap_outer": 0.995,
+ "gap_top": 0.981,
+ "gap_bot": 0.982,
+ "li": 0.988,
+ "betap": 0.992
+}

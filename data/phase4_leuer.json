@@ -1,0 +1,34 @@
+{
+  "n_heldout": 652,
+  "spearman_leuer_raw": 0.9167957259697825,
+  "spearman_leuer_clipped": 0.9167915120582858,
+  "pearson_leuer_raw": 0.13364499258025644,
+  "spearman_surrogate": 0.9844773815841296,
+  "n_marginal_heldout": 64,
+  "auc_marginal_leuer": 0.9585193452380952,
+  "auc_marginal_surrogate": 0.9723107993197279,
+  "by_regime": {
+    "marginal": {
+      "n": 64,
+      "spearman_leuer": 0.8516483516483516,
+      "spearman_surrogate": 0.8513278388278387
+    },
+    "mid": {
+      "n": 354,
+      "spearman_leuer": 0.9486571128890791,
+      "spearman_surrogate": 0.9693196196432449
+    },
+    "stable": {
+      "n": 193,
+      "spearman_leuer": 0.924110958282143,
+      "spearman_surrogate": 0.9670724053202285
+    },
+    "very_stable": {
+      "n": 41,
+      "spearman_leuer": 0.2186650921775287,
+      "spearman_surrogate": 0.8339721254355402
+    }
+  },
+  "rank_gain_surrogate_over_leuer": 0.06768586952584377,
+  "auc_gain_surrogate_over_leuer": 0.013791454081632626
+}

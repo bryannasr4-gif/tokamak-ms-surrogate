@@ -1,0 +1,28 @@
+{
+  "phase": "Phase 5 C4 — Device-C UNCONSTRAINED design comparison",
+  "registered": "2026-06-26",
+  "registered_before_running_design_loop": true,
+  "question": "On Device-C (kappa FREE / unconstrained), does the learned-m_s gradient beat (a) the reduce-kappa heuristic and (b) gradient-free CMA at raising TRUE 80-mode m_s?",
+  "framings": {
+    "zeroshot": "MAST-U shape->m_s surrogate (surrogate.pt) transfers UNCHANGED; composed with a Device-C ShapeMap (controls->shape, trained on Device-C probe/shapegen). Strongest evidence of 'learned physics, not MAST-U geometry'.",
+    "retrained": "Device-C-retrained shape->m_s surrogate (clean ablation; needs an 80-mode Device-C dataset)."
+  },
+  "protocol": {
+    "blas": "OMP=OPENBLAS=MKL=NUMEXPR=VECLIB=1",
+    "confirm_modes": 80,
+    "grid": "65x65, expanded Rmax=2.8 (Device-C)",
+    "design_space": "top-d=12 PCA over Device-C control distribution; box = [p2,p98] PC-score range",
+    "budget": 18,
+    "step": "MAX_STEP=0.45, line-search {step, step/2, step/4}; reset-on-stall so every method spends the FULL budget (equal true-solve count)",
+    "fairness": "each method ranks candidates by its OWN objective (surrogate->predicted m_s; reduce_kappa->predicted kappa reduction; cma->true m_s); every step confirmed by ONE true 80-mode solve; a step is accepted only if TRUE m_s improves; no early break."
+  },
+  "primary_metric": "win-rate: fraction of starts where surrogate.best_ms > reduce_kappa.best_ms (paired, same start). Reported with Wilson 95% CI + two-sided paired Wilcoxon on (best_ms_surrogate - best_ms_reduce_kappa) + two-sided sign test.",
+  "secondary_metric": "same vs cma (gradient-free).",
+  "resolution": "ALWAYS resolved by the TRUE 80-mode START m_s regime (marginal <0.4 / mid 0.4-1.0 / stable). Never aggregate without the regime breakdown.",
+  "replication": "a DISJOINT replication cohort of starts (separate from main) must reproduce the marginal result (pre-registered, not pooled-only).",
+  "DECISION": {
+    "WIN": "surrogate beats reduce_kappa UNCONSTRAINED, two-sided Wilcoxon p<0.05, AND replicated out-of-sample. => the learned m_s is a transferable physical model (thesis-closing).",
+    "TIE": "within noise (Wilcoxon n.s. or not replicated). => kappa-dominance is general to tokamak vertical stability; the delivered contribution remains the fixed-kappa differentiator + amortized solver-confirmed loop. Honest, still strong.",
+    "note": "The metric is the DESIGN-LOOP lever attribution, never raw prediction accuracy. A within-noise 'win' is NOT a win."
+  }
+}

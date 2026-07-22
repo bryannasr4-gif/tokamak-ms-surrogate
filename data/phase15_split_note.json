@@ -1,0 +1,51 @@
+{
+  "purpose": "Document the phase15_split_meta.json train-count discrepancy (2645) vs the actual dataset_v1_80q train-split row count (2602) flagged by the D13 verification sweep. Documentation only; NO split was changed (Fable supplement S2). Consumed by Stage-1 E2.",
+  "date": "2026-07-13",
+  "counts_found_per_file": {
+    "data/phase15_split_meta.json": {
+      "train": 2645,
+      "val": 466,
+      "test_extrap": 187,
+      "n": 3298,
+      "source_dataset": "dataset_v1 (pre-80-mode-relabel)",
+      "written_by": "experiments/phase15_dataset.py (make_split, seed=0; line ~300)",
+      "file_mtime": "2026-06-20"
+    },
+    "data/dataset_v1.parquet": {
+      "rows": 3298,
+      "train": 2645,
+      "val": 466,
+      "test_extrap": 187,
+      "note": "matches phase15_split_meta.json exactly (both are the pre-relabel dataset)"
+    },
+    "data/dataset_v1_80.parquet": {
+      "rows": 3254,
+      "train": 2602,
+      "val": 465,
+      "test_extrap": 187,
+      "note": "80-mode-relabeled; per-row split carried by idx from v1 (phase25_relabel_run.py)"
+    },
+    "data/dataset_v1_80q.parquet": {
+      "rows": 3254,
+      "train": 2602,
+      "val": 465,
+      "test_extrap": 187,
+      "note": "dataset_v1_80 + q95 column (Phase 2.5b); same rows/splits as dataset_v1_80"
+    }
+  },
+  "recompute_method": "pandas read_parquet + df['split'].value_counts() on each parquet (fusion-env python; read-only). Confirmed 2026-07-13.",
+  "cause": "phase15_split_meta.json was written at dataset_v1 creation (2026-06-20, n=3298) by phase15_dataset.py and records that pre-relabel dataset's split counts (train=2645). The subsequent 80-mode re-label (phase25_relabel_run.py) carried the per-row 'split' label into dataset_v1_80/_80q by idx, but DROPPED the 44 rows whose 80-mode m_s label was undefined/non-finite (3298 -> 3254). The drop hit 43 train rows (2645->2602) + 1 val row (466->465) + 0 test_extrap (187 unchanged). phase15_split_meta.json was never regenerated after this drop, so its train=2645 is a STALE pre-relabel count. This is a bookkeeping-staleness artifact, NOT a split-definition inconsistency: the split MEMBERSHIP (which idx is train/val/test_extrap) is unchanged; only the count file is stale.",
+  "delta": {
+    "total_dropped_by_80mode_relabel": 44,
+    "train_dropped": 43,
+    "val_dropped": 1,
+    "test_extrap_dropped": 0
+  },
+  "which_count_downstream_code_actually_uses": {
+    "authoritative": 2602,
+    "reason": "All downstream training/ablation code reads the 'split' column DIRECTLY from the parquet it loads, not from phase15_split_meta.json. Verified: phase2_train.py:136 'tr = df[df.split == \"train\"]'; the shipped 80-mode surrogate + Phase-4 ablations load dataset_v1_80q, giving train=2602. Independent confirmation: data/phase4_ablations_train.json learning_curve frac=1.0 has n=2602 (the full training set actually used).",
+    "phase15_split_meta_is_used_only_for": "the kappa_thresh (2.0048569835846415) and delta_thresh (0.49303756825512063) cut points that DEFINE the test_extrap corner, plus provenance/yield bookkeeping. Its 'counts' field is NOT read by training code for row membership.",
+    "epistemic_baseline_note": "The Stage-0 epistemic baseline (tier1_analyze.py / tier1_epistemic_baseline.py) does NOT use any held-out split at all: it samples 500 rows (random_state=0) from the FULL dataset_v1_80q parquet. So this split discrepancy does not affect the epistemic-baseline value."
+  },
+  "recommendation_for_E2": "Treat 2602 as the authoritative dataset_v1_80q train-split size. phase15_split_meta.json's train=2645 is stale for the 80-mode datasets; use it only for the kappa/delta thresholds. No split change is warranted (membership is consistent); optionally regenerate split_meta counts from dataset_v1_80q if a single source of truth is desired (out of scope here per S2 'document only')."
+}

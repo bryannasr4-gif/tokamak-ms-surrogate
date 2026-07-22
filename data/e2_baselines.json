@@ -1,0 +1,239 @@
+{
+  "experiment": "Stage-1 E2 -- trivial-baseline OOD detectors vs epistemic abstention flag",
+  "prereg": "Stage-1 pre-registration \u00a72.2 (frozen)",
+  "confirmatory": false,
+  "feature_list": [
+    "kappa",
+    "delta",
+    "delta_upper",
+    "delta_lower",
+    "sq_uo",
+    "sq_ui",
+    "sq_lo",
+    "sq_li",
+    "Rgeo",
+    "a",
+    "aspect",
+    "Rmag",
+    "Zaxis",
+    "gap_min",
+    "gap_inner",
+    "gap_outer",
+    "gap_top",
+    "gap_bot",
+    "li",
+    "betap"
+  ],
+  "standardization_provenance": "train-only",
+  "standardization": {
+    "mean": "train",
+    "std": "train",
+    "ddof": 0
+  },
+  "parquet_sha256": "22999307f0ab18ba676c2ec899c071373b6f1bc3fe70c803dd0d57e773ce6ec4",
+  "parquet_sha256_pinned": "22999307f0ab18ba676c2ec899c071373b6f1bc3fe70c803dd0d57e773ce6ec4",
+  "split_provenance": {
+    "source": "dataset_v1_80q.parquet own 'split' column",
+    "train": 2602,
+    "held_out_in_dist_val": 465,
+    "held_out_definition": "split=='val' (NOT test_extrap, the deliberately-OOD kappa-delta corner)",
+    "stale_meta_note": "data/phase15_split_meta.json counts (train 2645 / val 466) are the pre-relabel dataset_v1 counts; 44 rows (43 train + 1 val) were dropped by the 80-mode relabel. The deployed ensemble normalization matches the 2602-row train set EXACTLY (max |dmean| = 0.0)."
+  },
+  "denominators": {
+    "trivial_detectors_scored_on": 60,
+    "comparator_defined_on": 55,
+    "missing_comparator_slices": [
+      "28784_39",
+      "28796_90",
+      "28868_35",
+      "29180_42",
+      "30380_68"
+    ],
+    "missing_comparator_reason": "30380_68 selected but never produced a resolved JSON; 28784_39, 28796_90, 28868_35, 29180_42 are unconverged."
+  },
+  "d19b_feature_completion": {
+    "missing_features_completed": [
+      "sq_uo",
+      "sq_ui",
+      "sq_lo",
+      "sq_li",
+      "gap_min",
+      "gap_inner",
+      "gap_outer",
+      "gap_top",
+      "gap_bot"
+    ],
+    "squareness_source": "freegs4e Equilibrium.squareness (Luce 2013 quadrant construction) via a shim exposing separatrix() = raw real LCFS polygon",
+    "gap_source": "phase15_lib._seg_dist(LCFS, MAST-U limiter); limiter from machine_configs/MAST-U/serialized_tokamak.pkl (pickle load, not a solve)",
+    "validation_gate": {
+      "n_slices": 60,
+      "geom_bit_exact": true,
+      "efit_verbatim_exact": true,
+      "all_completed_finite": true,
+      "per_feature_max_abs_geom_diff": {
+        "kappa": 0.0,
+        "delta": 0.0,
+        "delta_upper": 0.0,
+        "delta_lower": 0.0,
+        "Rgeo": 0.0,
+        "a": 0.0,
+        "aspect": 0.0
+      },
+      "n_geom_mismatch": 0,
+      "n_efit_mismatch": 0,
+      "n_nonfinite": 0
+    }
+  },
+  "disclosures": {
+    "gaps": "gaps are the real MAST shape measured against the MAST-U wall (the Tier-1 cross-machine framing).",
+    "li_betap": "li and betap keep the known EFIT-vs-descriptors() definitional caveat."
+  },
+  "detectors": {
+    "mahalanobis": {
+      "space": "standardized train features (ddof=0)",
+      "covariance": "np.cov(rowvar=False) ddof=1",
+      "inverse": "np.linalg.pinv",
+      "covariance_rank": 19,
+      "n_features": 20
+    },
+    "range": {
+      "space": "raw features",
+      "rule": "flag if ANY feature outside train [min,max]",
+      "val_violations_by_feature": {
+        "kappa": 1,
+        "sq_uo": 2,
+        "sq_lo": 1,
+        "a": 1,
+        "Zaxis": 1,
+        "betap": 1
+      }
+    },
+    "hull_pca": {
+      "space": "PCA of standardized-then-centered train",
+      "membership": "Delaunay.find_simplex (primary) + LP linprog highs (cross-check)",
+      "cross_check": {
+        "val_delaunay_flagged": 92,
+        "val_lp_flagged": 92,
+        "val_disagreements": 0,
+        "real_delaunay_flagged": 60,
+        "real_lp_flagged": 60,
+        "real_disagreements": 0
+      }
+    }
+  },
+  "thresholds": {
+    "mahalanobis_p99_train_selfdist": 9.897476026246949,
+    "range": "per-feature train min/max",
+    "epistemic_p99_val": 0.16694473922252667,
+    "epistemic_median_val": 0.030593955889344215,
+    "epistemic_median_crosscheck_baseline": 0.02810867875814438,
+    "epistemic_median_crosscheck_note": "S0.2 baseline artifact present + in-band; eval set = 500-row rs=0 sample of the FULL parquet (n=3254), so a ~9% median offset vs the val-split median is expected -- the 'unverifiable' branch is NOT needed.",
+    "percentile_interpolation": "numpy default (linear)"
+  },
+  "pca_dims": 6,
+  "pca_variance_covered": 0.930368150928319,
+  "pca_explained_variance_ratio": [
+    0.42362011447567804,
+    0.18399496371488205,
+    0.15675451180404965,
+    0.07368289836214961,
+    0.05011356181902424,
+    0.04220210075253555,
+    0.028885136952238634,
+    0.02273643352056802,
+    0.010796814183393406,
+    0.006358594938273164,
+    0.0005702709460394198,
+    0.00011641154686518987,
+    5.66035005488417e-05,
+    4.715139226892113e-05,
+    4.324046093985272e-05,
+    1.2139070750623764e-05,
+    5.599801403566294e-06,
+    3.44929053368723e-06,
+    3.467857406408657e-09,
+    2.0710641665763988e-31
+  ],
+  "per_detector": {
+    "mahalanobis": {
+      "tpr_real": 1.0,
+      "n_tpr": 60,
+      "n_tpr_flagged": 60,
+      "fpr_indist": 0.010752688172043012,
+      "n_fpr": 465,
+      "n_fpr_flagged": 5
+    },
+    "range": {
+      "tpr_real": 1.0,
+      "n_tpr": 60,
+      "n_tpr_flagged": 60,
+      "fpr_indist": 0.010752688172043012,
+      "n_fpr": 465,
+      "n_fpr_flagged": 5
+    },
+    "hull_pca": {
+      "tpr_real": 1.0,
+      "n_tpr": 60,
+      "n_tpr_flagged": 60,
+      "fpr_indist": 0.1978494623655914,
+      "n_fpr": 465,
+      "n_fpr_flagged": 92
+    }
+  },
+  "comparator_epistemic": {
+    "tpr_real": 1.0,
+    "n_tpr": 55,
+    "n_tpr_flagged": 55,
+    "fpr_indist": 0.010752688172043012,
+    "n_fpr": 465,
+    "n_fpr_flagged": 5,
+    "note": "comparator (not a trivial detector); FPR on val is ~1% by construction (val p99 threshold)."
+  },
+  "agreement_matrix": {
+    "flags": [
+      "mahalanobis",
+      "range",
+      "hull_pca",
+      "epistemic"
+    ],
+    "n_slices": 55,
+    "matrix_pairwise_agreement_counts": [
+      [
+        55,
+        55,
+        55,
+        55
+      ],
+      [
+        55,
+        55,
+        55,
+        55
+      ],
+      [
+        55,
+        55,
+        55,
+        55
+      ],
+      [
+        55,
+        55,
+        55,
+        55
+      ]
+    ],
+    "per_flag_positive_count": {
+      "mahalanobis": 55,
+      "range": 55,
+      "hull_pca": 55,
+      "epistemic": 55
+    }
+  },
+  "decision_rule": "E2-CONFIRM iff ANY trivial detector has TPR_real >= 0.95 AND FPR_val <= 0.05; else E2-SURPRISE.",
+  "qualifying_detectors": [
+    "mahalanobis",
+    "range"
+  ],
+  "decision": "E2-CONFIRM"
+}

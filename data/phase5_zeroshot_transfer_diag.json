@@ -1,0 +1,16 @@
+{
+  "what": "Zero-shot transfer diagnostic: does the MAST-U shape->m_s surrogate transfer to Device-C?",
+  "n_starts": 40,
+  "spearman_pred_vs_true_80mode": 0.791,
+  "log_space_R2": -6.393,
+  "median_pred_over_true_ratio": 0.23,
+  "pred_ms_range": [0.057, 0.123],
+  "true_ms_range": [0.110, 0.856],
+  "interpretation": "CORRECTED MECHANISM (per Phase-D review): the design loop steps along the NORMALIZED autodiff gradient of log m_s, ranks candidates by argmax of predicted m_s, and accepts only on TRUE-m_s improvement -- all INVARIANT to a strictly-monotone output transform. So the ~4x under-prediction / range compression are PROVABLY HARMLESS to the loop and CANNOT explain the zero-shot loss. The loss is caused by local gradient-DIRECTION / response-surface distortion of the transferred surrogate on Device-C: zero-shot-vs-retrained gradient cosine = 0.63 (marginal 0.50, mid 0.79), i.e. the transferred gradient points in a substantially different direction than the Device-C-native one, worst in the marginal band. The global Spearman 0.79 is a RANK statistic and does not measure local gradient fidelity. Retraining repairs the local response surface (not the calibration), recovering the MID regime (zero-shot 17% -> retrained 72%) but NOT marginal (27% -> 36%). NOTE the zero-shot framing was the pre-registered 'learned physics, not geometry' test: the learned m_s is NOT a transferable absolute model across devices (it loses 22% to reduce-kappa, p=0.0002) and requires per-device retraining (~704 true 80-mode solves -- the per-device solver budget amortization was meant to avoid), after which it still only TIES. See data/device2_design_deepdive.json.",
+  "headline_zeroshot": {
+    "surrogate_vs_reduce_kappa_pooled": "9/40 = 22% (reduce_kappa WINS), Wilcoxon p=0.0002, sign p=0.0007",
+    "replication": "3/16 = 19%, Wilcoxon p=0.0017",
+    "surrogate_vs_cma_pooled": "24/40 = 60% (surrogate wins), Wilcoxon p=0.0032",
+    "median_best_ms_pooled": {"surrogate": 0.833, "reduce_kappa": 0.842, "cma": 0.623}
+  }
+}

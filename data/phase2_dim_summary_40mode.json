@@ -1,0 +1,285 @@
+{
+  "budget": 24,
+  "target": 1.0,
+  "effective_dim": 5.5099554360584815,
+  "cum_var": [
+    0.36433840638662385,
+    0.5008407544851823,
+    0.581266481384845,
+    0.6493493695718074,
+    0.7136384959378735,
+    0.776721006447691,
+    0.8381896849191535,
+    0.8954330971383869,
+    0.9522692532048012,
+    0.9726298304092065,
+    0.9825225156132217,
+    0.9906389228157191,
+    0.9953351461608966,
+    0.9987202225073247,
+    0.9995209434208918,
+    1.0
+  ],
+  "d_list": [
+    2,
+    4,
+    8,
+    12
+  ],
+  "methods": [
+    "surrogate",
+    "heuristic",
+    "cma",
+    "random"
+  ],
+  "grid": {
+    "2": {
+      "surrogate": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.49565950087519633,
+        "best_iqr": [
+          0.31339458255370667,
+          0.6954539643131394
+        ],
+        "success_rate": 0.0
+      },
+      "heuristic": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.3899495933176736,
+        "best_iqr": [
+          0.2910135508892656,
+          0.6102778647574401
+        ],
+        "success_rate": 0.0
+      },
+      "cma": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 23.0,
+        "best_median": 0.53149751748378,
+        "best_iqr": [
+          0.37277605662723584,
+          0.9186747285714117
+        ],
+        "success_rate": 0.2
+      },
+      "random": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.3896620709241104,
+        "best_iqr": [
+          0.3202601020844789,
+          0.5550484941113587
+        ],
+        "success_rate": 0.0
+      }
+    },
+    "4": {
+      "surrogate": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.6310426131049626,
+        "best_iqr": [
+          0.2960472228785512,
+          0.7231529734492934
+        ],
+        "success_rate": 0.0
+      },
+      "heuristic": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 21.8,
+        "best_median": 0.5681881813075581,
+        "best_iqr": [
+          0.29706235260574215,
+          0.5949416892951979
+        ],
+        "success_rate": 0.2
+      },
+      "cma": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.3515275006894743,
+        "best_iqr": [
+          0.3271713463515811,
+          0.41800265227082406
+        ],
+        "success_rate": 0.0
+      },
+      "random": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.3098657905455715,
+        "best_iqr": [
+          0.23896547481072394,
+          0.46140850284206164
+        ],
+        "success_rate": 0.0
+      }
+    },
+    "8": {
+      "surrogate": {
+        "n": 5,
+        "solves_median": 11.0,
+        "solves_iqr": [
+          11.0,
+          24.0
+        ],
+        "solves_mean": 16.0,
+        "best_median": 1.068062415740965,
+        "best_iqr": [
+          0.3243453149584427,
+          1.1029037857847315
+        ],
+        "success_rate": 0.6
+      },
+      "heuristic": {
+        "n": 5,
+        "solves_median": 13.0,
+        "solves_iqr": [
+          11.0,
+          24.0
+        ],
+        "solves_mean": 16.2,
+        "best_median": 1.0003924120921615,
+        "best_iqr": [
+          0.27222811330319524,
+          1.0072671707420544
+        ],
+        "success_rate": 0.6
+      },
+      "cma": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.4368431119056345,
+        "best_iqr": [
+          0.37516859403351654,
+          0.4440501995364558
+        ],
+        "success_rate": 0.0
+      },
+      "random": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 24.0,
+        "best_median": 0.37910043806934807,
+        "best_iqr": [
+          0.31728257812190697,
+          0.48400545952663376
+        ],
+        "success_rate": 0.0
+      }
+    },
+    "12": {
+      "surrogate": {
+        "n": 5,
+        "solves_median": 5.0,
+        "solves_iqr": [
+          4.0,
+          5.0
+        ],
+        "solves_mean": 8.4,
+        "best_median": 1.12517350694016,
+        "best_iqr": [
+          1.0341434932772666,
+          1.1855960913242867
+        ],
+        "success_rate": 0.8
+      },
+      "heuristic": {
+        "n": 5,
+        "solves_median": 5.0,
+        "solves_iqr": [
+          5.0,
+          8.0
+        ],
+        "solves_mean": 6.0,
+        "best_median": 1.0801325558244457,
+        "best_iqr": [
+          1.061880863562744,
+          1.2041796788689798
+        ],
+        "success_rate": 1.0
+      },
+      "cma": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          24.0,
+          24.0
+        ],
+        "solves_mean": 21.6,
+        "best_median": 0.6495022476865674,
+        "best_iqr": [
+          0.5623908213075918,
+          0.9326695495588923
+        ],
+        "success_rate": 0.2
+      },
+      "random": {
+        "n": 5,
+        "solves_median": 24.0,
+        "solves_iqr": [
+          22.0,
+          24.0
+        ],
+        "solves_mean": 22.8,
+        "best_median": 0.953900070753808,
+        "best_iqr": [
+          0.9392235119933732,
+          1.0323862355305051
+        ],
+        "success_rate": 0.4
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "kappa_thresh": 2.0048569835846415,
+  "delta_thresh": 0.49303756825512063,
+  "counts": {
+    "train": 2645,
+    "val": 466,
+    "test_extrap": 187
+  },
+  "n": 3298,
+  "yield_pct": 89.1833423472147,
+  "n_anchors": 21,
+  "rejections": {
+    "non-convergence": 246,
+    "limited plasma": 61,
+    "non-finite m_s": 93
+  }
+}

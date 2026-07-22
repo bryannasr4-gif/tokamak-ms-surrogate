@@ -1,0 +1,33 @@
+# Fusion m_s surrogate project -- pinned dependencies (verified on the Windows build, 2026-06-24).
+# These versions all have native Apple-Silicon (ARM64) wheels, so `pip install -r requirements.txt`
+# works on the M2 Pro. Python 3.12.x.
+#
+# Top-level packages are pinned; pip resolves the (cross-platform) transitive deps.
+
+# --- free-boundary Grad-Shafranov solver + vertical-stability / Portone m_s ---
+freegsnke==3.0.1
+# freegs4e is used by freegsnke internally (23 imports) but is NOT in freegsnke's declared deps,
+# so it MUST be listed explicitly or a fresh install fails at runtime. The load-bearing solver.
+freegs4e==0.13.1
+FreeGS==0.8.2          # only the superseded Phase-1 code uses plain freegs; kept for completeness
+# freegsnke's own deps (pip auto-pulls these, pinned here for a reproducible environment):
+cvxpy==1.7.5
+deepdiff==7.0.1
+scikit-image==0.25.2
+notebook==7.4.7
+
+# --- numerics (the locked-protocol stack) ---
+numpy==1.26.4
+scipy==1.15.3
+shapely==2.0.7
+h5py==3.13.0
+
+# --- ML + optimizers ---
+torch==2.12.0
+scikit-learn==1.9.0
+cma==4.4.4
+
+# --- data + plotting ---
+pandas==3.0.3
+pyarrow==24.0.0
+matplotlib==3.10.9

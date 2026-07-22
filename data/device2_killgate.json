@@ -1,0 +1,41 @@
+{
+  "n": 330,
+  "n_chunks": 11,
+  "corr_kappa_logms": -0.8110773201857601,
+  "corr_kappa_abs": 0.8110773201857601,
+  "corr_kappa_ci95": [
+    -0.8488759688943744,
+    -0.764411782838787
+  ],
+  "lever_sensitivity": {
+    "kappa": 0.8110773201857601,
+    "sq_uo": 0.6493144189486673,
+    "sq_lo": 0.653694791420574,
+    "sq_ui": 0.2771577333125189,
+    "sq_li": 0.2762434582836974,
+    "gap_inner": 0.05682212625710729,
+    "gap_outer": 0.3756459905717474,
+    "gap_top": 0.16330678385059047,
+    "gap_bot": 0.1654889559884096,
+    "li": 0.2703935005664131,
+    "betap": 0.41597059493826216,
+    "delta": 0.5698646535697381,
+    "delta_upper": 0.5666770460368198,
+    "delta_lower": 0.5730175333440743
+  },
+  "best_rival_lever": "sq_lo",
+  "best_rival_sensitivity": 0.653694791420574,
+  "rival_over_kappa": 0.8059586615871086,
+  "GO": true,
+  "kappa_range": [
+    1.5271526545155447,
+    2.350925372752008
+  ],
+  "ms_range": [
+    0.00033059296928246874,
+    1.4427367747918312
+  ],
+  "aspect_median": 2.9738787090468133,
+  "mast_u_reference_corr": -0.875,
+  "decision_rule": "GO if |corr(kappa,log m_s)|<0.75 OR best secondary lever |corr|>=0.7*|corr(kappa)|"
+}

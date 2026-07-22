@@ -1,0 +1,214 @@
+{
+  "zeroshot": {
+    "per_method_regime": {
+      "cma|marginal": {
+        "n": 22,
+        "mean_gain": 0.1566961077377595,
+        "mean_accepts": 2.8181818181818183,
+        "mean_invalid": 4.363636363636363,
+        "accept_rate": 0.15656565656565657
+      },
+      "cma|mid": {
+        "n": 18,
+        "mean_gain": 0.3463440935301994,
+        "mean_accepts": 2.9444444444444446,
+        "mean_invalid": 4.055555555555555,
+        "accept_rate": 0.16358024691358025
+      },
+      "reduce_kappa|marginal": {
+        "n": 22,
+        "mean_gain": 0.533388130654544,
+        "mean_accepts": 5.818181818181818,
+        "mean_invalid": 9.181818181818182,
+        "accept_rate": 0.32323232323232326
+      },
+      "reduce_kappa|mid": {
+        "n": 18,
+        "mean_gain": 0.7309159075537173,
+        "mean_accepts": 3.7222222222222223,
+        "mean_invalid": 12.11111111111111,
+        "accept_rate": 0.20679012345679013
+      },
+      "surrogate|marginal": {
+        "n": 22,
+        "mean_gain": 0.42892060252893266,
+        "mean_accepts": 5.863636363636363,
+        "mean_invalid": 7.681818181818182,
+        "accept_rate": 0.32575757575757575
+      },
+      "surrogate|mid": {
+        "n": 18,
+        "mean_gain": 0.5154477014257272,
+        "mean_accepts": 3.4444444444444446,
+        "mean_invalid": 13.277777777777779,
+        "accept_rate": 0.19135802469135804
+      }
+    },
+    "reduce_kappa_vs_cma": {
+      "marginal": {
+        "n": 22,
+        "wins": 16,
+        "win_rate": 0.7272727272727273,
+        "wilcoxon_p": 0.0019183158874511719,
+        "median_a": 0.6515580146661364,
+        "median_b": 0.36049644450425467
+      },
+      "mid": {
+        "n": 18,
+        "wins": 15,
+        "win_rate": 0.8333333333333334,
+        "wilcoxon_p": 0.00336456298828125,
+        "median_a": 1.1926537349312754,
+        "median_b": 0.8425314197567741
+      },
+      "POOLED": {
+        "n": 40,
+        "wins": 31,
+        "win_rate": 0.775,
+        "wilcoxon_p": 1.430089287168812e-05,
+        "median_a": 0.8416263741736449,
+        "median_b": 0.6233860615183235
+      }
+    },
+    "surrogate_vs_cma": {
+      "marginal": {
+        "n": 22,
+        "wins": 12,
+        "win_rate": 0.5454545454545454,
+        "wilcoxon_p": 0.02513885498046875,
+        "median_a": 0.6358381212313948,
+        "median_b": 0.36049644450425467
+      },
+      "mid": {
+        "n": 18,
+        "wins": 12,
+        "win_rate": 0.6666666666666666,
+        "wilcoxon_p": 0.1083831787109375,
+        "median_a": 0.9938117300217484,
+        "median_b": 0.8425314197567741
+      },
+      "POOLED": {
+        "n": 40,
+        "wins": 24,
+        "win_rate": 0.6,
+        "wilcoxon_p": 0.0032013230738812126,
+        "median_a": 0.8333098361517588,
+        "median_b": 0.6233860615183235
+      }
+    }
+  },
+  "retrained": {
+    "per_method_regime": {
+      "cma|marginal": {
+        "n": 22,
+        "mean_gain": 0.15669610773775947,
+        "mean_accepts": 2.8181818181818183,
+        "mean_invalid": 4.363636363636363,
+        "accept_rate": 0.15656565656565657
+      },
+      "cma|mid": {
+        "n": 18,
+        "mean_gain": 0.34634409353019946,
+        "mean_accepts": 2.9444444444444446,
+        "mean_invalid": 4.055555555555555,
+        "accept_rate": 0.16358024691358025
+      },
+      "reduce_kappa|marginal": {
+        "n": 22,
+        "mean_gain": 0.5333881306545438,
+        "mean_accepts": 5.818181818181818,
+        "mean_invalid": 9.181818181818182,
+        "accept_rate": 0.32323232323232326
+      },
+      "reduce_kappa|mid": {
+        "n": 18,
+        "mean_gain": 0.7309159075537172,
+        "mean_accepts": 3.7222222222222223,
+        "mean_invalid": 12.11111111111111,
+        "accept_rate": 0.20679012345679013
+      },
+      "surrogate|marginal": {
+        "n": 22,
+        "mean_gain": 0.4038666396836533,
+        "mean_accepts": 5.0,
+        "mean_invalid": 11.454545454545455,
+        "accept_rate": 0.2777777777777778
+      },
+      "surrogate|mid": {
+        "n": 18,
+        "mean_gain": 0.8877954511282398,
+        "mean_accepts": 5.388888888888889,
+        "mean_invalid": 11.055555555555555,
+        "accept_rate": 0.2993827160493827
+      }
+    },
+    "reduce_kappa_vs_cma": {
+      "marginal": {
+        "n": 22,
+        "wins": 16,
+        "win_rate": 0.7272727272727273,
+        "wilcoxon_p": 0.0019183158874511719,
+        "median_a": 0.6515580146661364,
+        "median_b": 0.36049644450425467
+      },
+      "mid": {
+        "n": 18,
+        "wins": 15,
+        "win_rate": 0.8333333333333334,
+        "wilcoxon_p": 0.00336456298828125,
+        "median_a": 1.1926537349312754,
+        "median_b": 0.8425314197567741
+      },
+      "POOLED": {
+        "n": 40,
+        "wins": 31,
+        "win_rate": 0.775,
+        "wilcoxon_p": 1.430089287168812e-05,
+        "median_a": 0.8416263741736449,
+        "median_b": 0.6233860615183235
+      }
+    },
+    "surrogate_vs_cma": {
+      "marginal": {
+        "n": 22,
+        "wins": 13,
+        "win_rate": 0.5909090909090909,
+        "wilcoxon_p": 0.12888002395629883,
+        "median_a": 0.41264071564279237,
+        "median_b": 0.36049644450425467
+      },
+      "mid": {
+        "n": 18,
+        "wins": 17,
+        "win_rate": 0.9444444444444444,
+        "wilcoxon_p": 2.288818359375e-05,
+        "median_a": 1.4209094146535555,
+        "median_b": 0.8425314197567741
+      },
+      "POOLED": {
+        "n": 40,
+        "wins": 30,
+        "win_rate": 0.75,
+        "wilcoxon_p": 2.639073136379011e-05,
+        "median_a": 0.8559697772550507,
+        "median_b": 0.6233860615183235
+      }
+    }
+  },
+  "gradient_cosine": {
+    "zeroshot_vs_retrained_mean": 0.6289137745659209,
+    "retrained_vs_reduce_kappa_mean": 0.7833601350369312,
+    "by_regime": {
+      "marginal": {
+        "n": 22,
+        "cos_zs_rt": 0.5001599133320889,
+        "cos_rt_kappa": 0.7125559343573166
+      },
+      "mid": {
+        "n": 18,
+        "cos_zs_rt": 0.7862796049628268,
+        "cos_rt_kappa": 0.8698986025342379
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "n_slices": 59,
+  "n_shots": 40,
+  "convergence_yield": 0.9322033898305084,
+  "diverted_frac": 0.3220338983050847,
+  "status": {
+    "ok": 55,
+    "unconverged": 4
+  },
+  "consistency": {
+    "n": 30,
+    "n_shots": 23,
+    "median_resid": 0.6135789190909569,
+    "median_ambiguity_40_80": 0.20864101475259283,
+    "median_epi_std": 0.7144827246665955,
+    "corr_resid_ood": 0.29515314679707866,
+    "corr_epi_ood": -0.049999546846353424
+  },
+  "fidelity": {
+    "median_dkappa": 0.12295901305288415,
+    "median_zeta_cm": 15.910324325302971
+  },
+  "indist_epistemic_median": 0.02810867875814438,
+  "indist_epistemic_median_provenance": {
+    "script": "experiments/tier1_epistemic_baseline.py",
+    "artifact": "data/tier1_epistemic_baseline.json",
+    "definition": "median over the in-dist eval set of the ensemble epistemic std (std across the 8 ensemble members' log-m_s mean predictions), column 0 = log m_s; same space + code path as tier1_analyze.py applies to the real slices (tier1_resolve_worker surr_epi_std).",
+    "eval_set": "500-row random_state=0 sample of the FULL data/dataset_v1_80q.parquet (n_rows=3254), SHAPE_FEATURES order -- reproduces tier1_analyze.py lines 79-87 verbatim; NOT a held-out split (tier1_analyze.py samples the full parquet).",
+    "n": 500,
+    "date": "2026-07-13",
+    "ratio_real_over_baseline": 25.418580887925117,
+    "confirmatory": false
+  }
+}

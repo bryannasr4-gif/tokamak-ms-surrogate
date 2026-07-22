@@ -1,0 +1,1 @@
+{"start_id": 0, "design": "robust", "cohort": "main", "band": "marg_band", "ms40_start": 0.08086599745661859, "center_ms": 0.0, "pert_ms": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "sigma_rel": "coil3%/paxis5%/Ip3%/fvac.02/alpha.05", "M": 16}

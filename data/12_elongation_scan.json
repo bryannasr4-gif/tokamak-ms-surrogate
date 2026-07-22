@@ -1,0 +1,30 @@
+[
+  {
+    "zscale": 0.8,
+    "kappa": 1.65,
+    "gamma": 2.27,
+    "stability_margin": 3.914,
+    "leuer": -36.23
+  },
+  {
+    "zscale": 0.88,
+    "kappa": 1.822,
+    "gamma": 22.32,
+    "stability_margin": 1.044,
+    "leuer": 2.808
+  },
+  {
+    "zscale": 0.96,
+    "kappa": 1.975,
+    "gamma": 147.92,
+    "stability_margin": 0.522,
+    "leuer": 1.774
+  },
+  {
+    "zscale": 1.0,
+    "kappa": 2.055,
+    "gamma": 329.84,
+    "stability_margin": 0.336,
+    "leuer": 1.541
+  }
+]

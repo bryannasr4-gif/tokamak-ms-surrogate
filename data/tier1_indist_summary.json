@@ -1,0 +1,11 @@
+{
+  "n": 24,
+  "n_ok": 23,
+  "re_betap_med": 1.151,
+  "betap_true_med": 0.2387,
+  "betap_inflation": 4.82,
+  "native_resid_med": 0.034,
+  "resolve_resid_med_indist": 0.2109,
+  "note": "in-dist pipeline floor; real-shape resolve_resid median=0.61 => OOD excess ~ (0.61 - indist_floor)",
+  "n_resolve_resid": 17
+}

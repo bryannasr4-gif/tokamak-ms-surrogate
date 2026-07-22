@@ -1,0 +1,7 @@
+{
+  "ms_cross_thread_spread_median": 4.871396706051789,
+  "ms_cross_thread_spread_max": 11.372093037509591,
+  "gamma_cross_thread_spread_median": 4.731000515280924,
+  "gamma_cross_thread_spread_max": 19.045013968543145,
+  "n_shapes": 10
+}

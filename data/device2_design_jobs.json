@@ -1,0 +1,962 @@
+[
+  {
+    "jid": 0,
+    "start_id": 0,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260626
+  },
+  {
+    "jid": 1,
+    "start_id": 0,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260627
+  },
+  {
+    "jid": 2,
+    "start_id": 0,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260628
+  },
+  {
+    "jid": 3,
+    "start_id": 1,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260633
+  },
+  {
+    "jid": 4,
+    "start_id": 1,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260634
+  },
+  {
+    "jid": 5,
+    "start_id": 1,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260635
+  },
+  {
+    "jid": 6,
+    "start_id": 2,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260640
+  },
+  {
+    "jid": 7,
+    "start_id": 2,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260641
+  },
+  {
+    "jid": 8,
+    "start_id": 2,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260642
+  },
+  {
+    "jid": 9,
+    "start_id": 3,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260647
+  },
+  {
+    "jid": 10,
+    "start_id": 3,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260648
+  },
+  {
+    "jid": 11,
+    "start_id": 3,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260649
+  },
+  {
+    "jid": 12,
+    "start_id": 4,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260654
+  },
+  {
+    "jid": 13,
+    "start_id": 4,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260655
+  },
+  {
+    "jid": 14,
+    "start_id": 4,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260656
+  },
+  {
+    "jid": 15,
+    "start_id": 5,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260661
+  },
+  {
+    "jid": 16,
+    "start_id": 5,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260662
+  },
+  {
+    "jid": 17,
+    "start_id": 5,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260663
+  },
+  {
+    "jid": 18,
+    "start_id": 6,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260668
+  },
+  {
+    "jid": 19,
+    "start_id": 6,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260669
+  },
+  {
+    "jid": 20,
+    "start_id": 6,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260670
+  },
+  {
+    "jid": 21,
+    "start_id": 7,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260675
+  },
+  {
+    "jid": 22,
+    "start_id": 7,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260676
+  },
+  {
+    "jid": 23,
+    "start_id": 7,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260677
+  },
+  {
+    "jid": 24,
+    "start_id": 8,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260682
+  },
+  {
+    "jid": 25,
+    "start_id": 8,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260683
+  },
+  {
+    "jid": 26,
+    "start_id": 8,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260684
+  },
+  {
+    "jid": 27,
+    "start_id": 9,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260689
+  },
+  {
+    "jid": 28,
+    "start_id": 9,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260690
+  },
+  {
+    "jid": 29,
+    "start_id": 9,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260691
+  },
+  {
+    "jid": 30,
+    "start_id": 10,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260696
+  },
+  {
+    "jid": 31,
+    "start_id": 10,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260697
+  },
+  {
+    "jid": 32,
+    "start_id": 10,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260698
+  },
+  {
+    "jid": 33,
+    "start_id": 11,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260703
+  },
+  {
+    "jid": 34,
+    "start_id": 11,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260704
+  },
+  {
+    "jid": 35,
+    "start_id": 11,
+    "cohort": "main",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260705
+  },
+  {
+    "jid": 36,
+    "start_id": 12,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260710
+  },
+  {
+    "jid": 37,
+    "start_id": 12,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260711
+  },
+  {
+    "jid": 38,
+    "start_id": 12,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260712
+  },
+  {
+    "jid": 39,
+    "start_id": 13,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260717
+  },
+  {
+    "jid": 40,
+    "start_id": 13,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260718
+  },
+  {
+    "jid": 41,
+    "start_id": 13,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260719
+  },
+  {
+    "jid": 42,
+    "start_id": 14,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260724
+  },
+  {
+    "jid": 43,
+    "start_id": 14,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260725
+  },
+  {
+    "jid": 44,
+    "start_id": 14,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260726
+  },
+  {
+    "jid": 45,
+    "start_id": 15,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260731
+  },
+  {
+    "jid": 46,
+    "start_id": 15,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260732
+  },
+  {
+    "jid": 47,
+    "start_id": 15,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260733
+  },
+  {
+    "jid": 48,
+    "start_id": 16,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260738
+  },
+  {
+    "jid": 49,
+    "start_id": 16,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260739
+  },
+  {
+    "jid": 50,
+    "start_id": 16,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260740
+  },
+  {
+    "jid": 51,
+    "start_id": 17,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260745
+  },
+  {
+    "jid": 52,
+    "start_id": 17,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260746
+  },
+  {
+    "jid": 53,
+    "start_id": 17,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260747
+  },
+  {
+    "jid": 54,
+    "start_id": 18,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260752
+  },
+  {
+    "jid": 55,
+    "start_id": 18,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260753
+  },
+  {
+    "jid": 56,
+    "start_id": 18,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260754
+  },
+  {
+    "jid": 57,
+    "start_id": 19,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260759
+  },
+  {
+    "jid": 58,
+    "start_id": 19,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260760
+  },
+  {
+    "jid": 59,
+    "start_id": 19,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260761
+  },
+  {
+    "jid": 60,
+    "start_id": 20,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260766
+  },
+  {
+    "jid": 61,
+    "start_id": 20,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260767
+  },
+  {
+    "jid": 62,
+    "start_id": 20,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260768
+  },
+  {
+    "jid": 63,
+    "start_id": 21,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260773
+  },
+  {
+    "jid": 64,
+    "start_id": 21,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260774
+  },
+  {
+    "jid": 65,
+    "start_id": 21,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260775
+  },
+  {
+    "jid": 66,
+    "start_id": 22,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260780
+  },
+  {
+    "jid": 67,
+    "start_id": 22,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260781
+  },
+  {
+    "jid": 68,
+    "start_id": 22,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260782
+  },
+  {
+    "jid": 69,
+    "start_id": 23,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260787
+  },
+  {
+    "jid": 70,
+    "start_id": 23,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260788
+  },
+  {
+    "jid": 71,
+    "start_id": 23,
+    "cohort": "main",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260789
+  },
+  {
+    "jid": 72,
+    "start_id": 24,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260794
+  },
+  {
+    "jid": 73,
+    "start_id": 24,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260795
+  },
+  {
+    "jid": 74,
+    "start_id": 24,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260796
+  },
+  {
+    "jid": 75,
+    "start_id": 25,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260801
+  },
+  {
+    "jid": 76,
+    "start_id": 25,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260802
+  },
+  {
+    "jid": 77,
+    "start_id": 25,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260803
+  },
+  {
+    "jid": 78,
+    "start_id": 26,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260808
+  },
+  {
+    "jid": 79,
+    "start_id": 26,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260809
+  },
+  {
+    "jid": 80,
+    "start_id": 26,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260810
+  },
+  {
+    "jid": 81,
+    "start_id": 27,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260815
+  },
+  {
+    "jid": 82,
+    "start_id": 27,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260816
+  },
+  {
+    "jid": 83,
+    "start_id": 27,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260817
+  },
+  {
+    "jid": 84,
+    "start_id": 28,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260822
+  },
+  {
+    "jid": 85,
+    "start_id": 28,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260823
+  },
+  {
+    "jid": 86,
+    "start_id": 28,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260824
+  },
+  {
+    "jid": 87,
+    "start_id": 29,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260829
+  },
+  {
+    "jid": 88,
+    "start_id": 29,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260830
+  },
+  {
+    "jid": 89,
+    "start_id": 29,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260831
+  },
+  {
+    "jid": 90,
+    "start_id": 30,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260836
+  },
+  {
+    "jid": 91,
+    "start_id": 30,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260837
+  },
+  {
+    "jid": 92,
+    "start_id": 30,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260838
+  },
+  {
+    "jid": 93,
+    "start_id": 31,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "surrogate",
+    "seed": 20260843
+  },
+  {
+    "jid": 94,
+    "start_id": 31,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "reduce_kappa",
+    "seed": 20260844
+  },
+  {
+    "jid": 95,
+    "start_id": 31,
+    "cohort": "replication",
+    "band": "marg_band",
+    "method": "cma",
+    "seed": 20260845
+  },
+  {
+    "jid": 96,
+    "start_id": 32,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260850
+  },
+  {
+    "jid": 97,
+    "start_id": 32,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260851
+  },
+  {
+    "jid": 98,
+    "start_id": 32,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260852
+  },
+  {
+    "jid": 99,
+    "start_id": 33,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260857
+  },
+  {
+    "jid": 100,
+    "start_id": 33,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260858
+  },
+  {
+    "jid": 101,
+    "start_id": 33,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260859
+  },
+  {
+    "jid": 102,
+    "start_id": 34,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260864
+  },
+  {
+    "jid": 103,
+    "start_id": 34,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260865
+  },
+  {
+    "jid": 104,
+    "start_id": 34,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260866
+  },
+  {
+    "jid": 105,
+    "start_id": 35,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260871
+  },
+  {
+    "jid": 106,
+    "start_id": 35,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260872
+  },
+  {
+    "jid": 107,
+    "start_id": 35,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260873
+  },
+  {
+    "jid": 108,
+    "start_id": 36,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260878
+  },
+  {
+    "jid": 109,
+    "start_id": 36,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260879
+  },
+  {
+    "jid": 110,
+    "start_id": 36,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260880
+  },
+  {
+    "jid": 111,
+    "start_id": 37,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260885
+  },
+  {
+    "jid": 112,
+    "start_id": 37,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260886
+  },
+  {
+    "jid": 113,
+    "start_id": 37,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260887
+  },
+  {
+    "jid": 114,
+    "start_id": 38,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260892
+  },
+  {
+    "jid": 115,
+    "start_id": 38,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260893
+  },
+  {
+    "jid": 116,
+    "start_id": 38,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260894
+  },
+  {
+    "jid": 117,
+    "start_id": 39,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "surrogate",
+    "seed": 20260899
+  },
+  {
+    "jid": 118,
+    "start_id": 39,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "reduce_kappa",
+    "seed": 20260900
+  },
+  {
+    "jid": 119,
+    "start_id": 39,
+    "cohort": "replication",
+    "band": "mid_band",
+    "method": "cma",
+    "seed": 20260901
+  }
+]

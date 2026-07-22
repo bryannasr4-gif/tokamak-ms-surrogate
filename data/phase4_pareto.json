@@ -1,0 +1,13 @@
+{
+  "n_heldout": 652,
+  "rmse_log": 0.12260941656115258,
+  "r2_log": 0.9713551322188005,
+  "t_true_solve_s": 22.73330834999797,
+  "t_forward_only_s": 5.003153999976348,
+  "t_surr_infer_s": 0.0003516419499937911,
+  "t_grad_s": 0.0024499094998463988,
+  "speedup_infer": 64649.02253670067,
+  "speedup_infer_plus_grad": 8114.542515824493,
+  "training_cost_true_solves": 3254,
+  "n_true": 8
+}

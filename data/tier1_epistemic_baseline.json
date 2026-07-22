@@ -1,0 +1,20 @@
+{
+  "value": 0.02810867875814438,
+  "n": 500,
+  "split": "500-row random_state=0 sample of the FULL data/dataset_v1_80q.parquet (n_rows=3254), SHAPE_FEATURES order -- reproduces tier1_analyze.py lines 79-87 verbatim; NOT a held-out split (tier1_analyze.py samples the full parquet).",
+  "definition": "median over the in-dist eval set of the ensemble epistemic std (std across the 8 ensemble members' log-m_s mean predictions), column 0 = log m_s; same space + code path as tier1_analyze.py applies to the real slices (tier1_resolve_worker surr_epi_std).",
+  "script": "experiments/tier1_epistemic_baseline.py",
+  "date": "2026-07-13",
+  "real_epi_median": 0.7144827246665955,
+  "ratio_real_over_baseline": 25.418580887925117,
+  "ratio_2sigfig": 25.0,
+  "ledger_baseline_reference": 0.028,
+  "gate_band_G_S0_2_3": [
+    0.0224,
+    0.0336
+  ],
+  "in_band": true,
+  "exploratory": true,
+  "confirmatory": false,
+  "flag_note": "Flags added 2026-07-15 per FA5-4 / E-FA5-2 ruling; absent at birth (d4d9ef4) because the frozen S0.2 TASK-c schema {value,n,split,definition,script,date} predated the 00 §9 cross-check. Scope: value/n/gate_band/in_band form the G-S0.2-3 feasibility-gate record (§9-gate-exempt); the exploratory flag binds real_epi_median / ratio_real_over_baseline / ratio_2sigfig — the ~25x domain-flag multiplier is descriptive/supporting (Tier-1 profile-match gate 0/55 VOIDED; abstention-flag paragraph contingent on E2), never a confirmatory statistic."
+}

@@ -1,0 +1,8 @@
+{
+ "note": "autograd self-consistency: composed-surrogate autodiff vs central-FD of the SAME surrogate (NOT physical verification)",
+ "cosines": [
+  1.0000001192092896,
+  0.9999998807907104,
+  0.9999998807907104
+ ]
+}

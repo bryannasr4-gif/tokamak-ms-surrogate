@@ -1,0 +1,56 @@
+{
+  "framing": "zeroshot",
+  "n": 6,
+  "worst_pct": 0.0,
+  "gate_under_5pct": true,
+  "endpoints": [
+    {
+      "jid": 97,
+      "method": "reduce_kappa",
+      "stored_best_ms": 2.473945107947411,
+      "resolve_ms": 2.473945107947411,
+      "independent_ms": 2.473945107947411,
+      "pct_diff": 0.0
+    },
+    {
+      "jid": 55,
+      "method": "reduce_kappa",
+      "stored_best_ms": 2.2963073770104554,
+      "resolve_ms": 2.2963073770104554,
+      "independent_ms": 2.2963073770104554,
+      "pct_diff": 0.0
+    },
+    {
+      "jid": 103,
+      "method": "reduce_kappa",
+      "stored_best_ms": 1.9909510415845604,
+      "resolve_ms": 1.9909510415845604,
+      "independent_ms": 1.9909510415845604,
+      "pct_diff": 0.0
+    },
+    {
+      "jid": 73,
+      "method": "reduce_kappa",
+      "stored_best_ms": 0.13455042791676866,
+      "resolve_ms": 0.13455042791676866,
+      "independent_ms": 0.13455042791676866,
+      "pct_diff": 0.0
+    },
+    {
+      "jid": 93,
+      "method": "surrogate",
+      "stored_best_ms": 0.7493513558172128,
+      "resolve_ms": 0.7493513558172128,
+      "independent_ms": 0.7493513558172128,
+      "pct_diff": 0.0
+    },
+    {
+      "jid": 109,
+      "method": "reduce_kappa",
+      "stored_best_ms": 2.0758683896271366,
+      "resolve_ms": 2.0758683896271366,
+      "independent_ms": 2.0758683896271366,
+      "pct_diff": 0.0
+    }
+  ]
+}

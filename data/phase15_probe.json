@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "zscale": 1.0,
+    "dR": 0.0,
+    "grid": [
+      65,
+      65
+    ],
+    "fix_n_vessel_modes": 40,
+    "OMP": 1
+  },
+  "m_s_inverse": 0.41994048691611474,
+  "m_s_forward": 0.41993887391144935,
+  "rel_diff_pct": 0.00038410315643435706,
+  "coil_currents_active": {
+    "Solenoid": 5000.0,
+    "PX": 3708.0242525790622,
+    "D1": 6924.934621538875,
+    "D2": 4409.2203051353035,
+    "D3": 2922.589986457195,
+    "Dp": -2492.088723898205,
+    "D5": 251.55967451423848,
+    "D6": -321.49206028313415,
+    "D7": 504.94117365040046,
+    "P4": -3553.357326340233,
+    "P5": -3955.737413962417,
+    "P6": -9.196688335822375e-05
+  },
+  "timings_s": {
+    "inverse": 2.125333070755005,
+    "inv_lin": 12.802873373031616,
+    "forward": 0.06804919242858887,
+    "fwd_lin": 12.949761629104614
+  },
+  "note": "Forward solve with fixed coils = inverse-anchor currents reproduces the inverse m_s; evidence for the dataset_v1 forward-sampling validity (DATASET.md / RESULTS.md Phase 1.5)."
+}

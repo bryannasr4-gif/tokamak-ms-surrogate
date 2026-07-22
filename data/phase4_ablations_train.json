@@ -1,0 +1,107 @@
+{
+  "config": {
+    "n_models": 8,
+    "epochs": 2600,
+    "warmup": 800
+  },
+  "learning_curve": [
+    {
+      "frac": 0.125,
+      "n": 325,
+      "rmse_log": 0.13997964395522133,
+      "rmse_log_marginal": 0.31519380102918854
+    },
+    {
+      "frac": 0.25,
+      "n": 650,
+      "rmse_log": 0.13019857857469808,
+      "rmse_log_marginal": 0.3181122023638309
+    },
+    {
+      "frac": 0.5,
+      "n": 1301,
+      "rmse_log": 0.12894572186727818,
+      "rmse_log_marginal": 0.3307162415943681
+    },
+    {
+      "frac": 1.0,
+      "n": 2602,
+      "rmse_log": 0.12175778453477233,
+      "rmse_log_marginal": 0.31269236336847295
+    }
+  ],
+  "shape_parameterization": [
+    {
+      "name": "kappa",
+      "n_feats": 1,
+      "rmse_log": 0.44225047722722294,
+      "rmse_log_marginal": 0.5968873647921976,
+      "by_regime": {
+        "marginal": 0.5968873647921976,
+        "mid": 0.4562837976989066,
+        "stable": 0.3685715259036154,
+        "very_stable": 0.34219844429956087
+      }
+    },
+    {
+      "name": "kappa_delta",
+      "n_feats": 2,
+      "rmse_log": 0.26111777056936997,
+      "rmse_log_marginal": 0.455364562844602,
+      "by_regime": {
+        "marginal": 0.455364562844602,
+        "mid": 0.21217174526160001,
+        "stable": 0.23889184672265276,
+        "very_stable": 0.32134627898083307
+      }
+    },
+    {
+      "name": "plus_gaps",
+      "n_feats": 5,
+      "rmse_log": 0.1641190996972508,
+      "rmse_log_marginal": 0.3307305006764389,
+      "by_regime": {
+        "marginal": 0.3307305006764389,
+        "mid": 0.13663266260483606,
+        "stable": 0.13234308524264468,
+        "very_stable": 0.1181361172329668
+      }
+    },
+    {
+      "name": "plus_squareness",
+      "n_feats": 9,
+      "rmse_log": 0.12026714738290663,
+      "rmse_log_marginal": 0.3105858106554379,
+      "by_regime": {
+        "marginal": 0.3105858106554379,
+        "mid": 0.06935369101413574,
+        "stable": 0.07149185255974205,
+        "very_stable": 0.11768360899327918
+      }
+    },
+    {
+      "name": "plus_li_betap",
+      "n_feats": 11,
+      "rmse_log": 0.119904331774852,
+      "rmse_log_marginal": 0.3111616682982963,
+      "by_regime": {
+        "marginal": 0.3111616682982963,
+        "mid": 0.06548330516420617,
+        "stable": 0.07179640941911382,
+        "very_stable": 0.1273001224393381
+      }
+    },
+    {
+      "name": "full20",
+      "n_feats": 20,
+      "rmse_log": 0.12157268326716623,
+      "rmse_log_marginal": 0.3127452914813629,
+      "by_regime": {
+        "marginal": 0.3127452914813629,
+        "mid": 0.0645973443814621,
+        "stable": 0.07320719962318044,
+        "very_stable": 0.14526424048230013
+      }
+    }
+  ]
+}

@@ -1,0 +1,1426 @@
+{
+  "candidate_shots": [
+    28412,
+    28424,
+    28436,
+    28448,
+    28460,
+    28472,
+    28484,
+    28496,
+    28508,
+    28520,
+    28532,
+    28544,
+    28556,
+    28568,
+    28580,
+    28592,
+    28604,
+    28616,
+    28628,
+    28640,
+    28652,
+    28664,
+    28676,
+    28688,
+    28700,
+    28712,
+    28724,
+    28736,
+    28748,
+    28760,
+    28772,
+    28784,
+    28796,
+    28808,
+    28820,
+    28832,
+    28844,
+    28856,
+    28868,
+    28880,
+    28892,
+    28904,
+    28916,
+    28928,
+    28940,
+    28952,
+    28964,
+    28976,
+    28988,
+    29000,
+    29012,
+    29024,
+    29036,
+    29048,
+    29060,
+    29072,
+    29084,
+    29096,
+    29108,
+    29120,
+    29132,
+    29144,
+    29156,
+    29168,
+    29180,
+    29192,
+    29204,
+    29216,
+    29228,
+    29240,
+    29252,
+    29264,
+    29276,
+    29288,
+    29300,
+    29312,
+    29324,
+    29336,
+    29348,
+    29360,
+    29372,
+    29384,
+    29396,
+    29408,
+    29420,
+    29432,
+    29444,
+    29456,
+    29468,
+    29480,
+    29492,
+    29504,
+    29516,
+    29528,
+    29540,
+    29552,
+    29564,
+    29576,
+    29588,
+    29600,
+    29612,
+    29624,
+    29636,
+    29648,
+    29660,
+    29672,
+    29684,
+    29696,
+    29708,
+    29720,
+    29732,
+    29744,
+    29756,
+    29768,
+    29780,
+    29792,
+    29804,
+    29816,
+    29828,
+    29840,
+    29852,
+    29864,
+    29876,
+    29888,
+    29900,
+    29912,
+    29924,
+    29936,
+    29948,
+    29960,
+    29972,
+    29984,
+    29996,
+    30008,
+    30020,
+    30032,
+    30044,
+    30056,
+    30068,
+    30080,
+    30092,
+    30104,
+    30116,
+    30128,
+    30140,
+    30152,
+    30164,
+    30176,
+    30188,
+    30200,
+    30212,
+    30224,
+    30236,
+    30248,
+    30260,
+    30272,
+    30284,
+    30296,
+    30308,
+    30320,
+    30332,
+    30344,
+    30356,
+    30368,
+    30380,
+    30392,
+    30404,
+    30416,
+    30428,
+    30440,
+    30452,
+    30464
+  ],
+  "shot_report": [
+    {
+      "shot": 28412,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28424,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28436,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28448,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28460,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28472,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28484,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28496,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28508,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28520,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28532,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28544,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28556,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28568,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28580,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28592,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28604,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28616,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28628,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28640,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28652,
+      "status": "ok",
+      "n_quality": 31,
+      "n_kept": 4,
+      "kappa": [
+        1.645,
+        1.876
+      ]
+    },
+    {
+      "shot": 28664,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28676,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28688,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28700,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28712,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28724,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28736,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28748,
+      "status": "ok",
+      "n_quality": 49,
+      "n_kept": 5,
+      "kappa": [
+        1.621,
+        1.967
+      ]
+    },
+    {
+      "shot": 28760,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28772,
+      "status": "ok",
+      "n_quality": 40,
+      "n_kept": 5,
+      "kappa": [
+        1.624,
+        1.96
+      ]
+    },
+    {
+      "shot": 28784,
+      "status": "ok",
+      "n_quality": 59,
+      "n_kept": 3,
+      "kappa": [
+        1.547,
+        1.653
+      ]
+    },
+    {
+      "shot": 28796,
+      "status": "ok",
+      "n_quality": 70,
+      "n_kept": 4,
+      "kappa": [
+        1.425,
+        1.66
+      ]
+    },
+    {
+      "shot": 28808,
+      "status": "ok",
+      "n_quality": 55,
+      "n_kept": 7,
+      "kappa": [
+        1.539,
+        2.092
+      ]
+    },
+    {
+      "shot": 28820,
+      "status": "ok",
+      "n_quality": 63,
+      "n_kept": 3,
+      "kappa": [
+        1.61,
+        1.753
+      ]
+    },
+    {
+      "shot": 28832,
+      "status": "ok",
+      "n_quality": 69,
+      "n_kept": 6,
+      "kappa": [
+        1.622,
+        2.05
+      ]
+    },
+    {
+      "shot": 28844,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28856,
+      "status": "ok",
+      "n_quality": 41,
+      "n_kept": 7,
+      "kappa": [
+        1.532,
+        2.117
+      ]
+    },
+    {
+      "shot": 28868,
+      "status": "ok",
+      "n_quality": 71,
+      "n_kept": 5,
+      "kappa": [
+        1.548,
+        1.859
+      ]
+    },
+    {
+      "shot": 28880,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28892,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28904,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28916,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28928,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28940,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28952,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28964,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 28976,
+      "status": "ok",
+      "n_quality": 56,
+      "n_kept": 5,
+      "kappa": [
+        1.702,
+        2.069
+      ]
+    },
+    {
+      "shot": 28988,
+      "status": "ok",
+      "n_quality": 67,
+      "n_kept": 4,
+      "kappa": [
+        1.536,
+        1.792
+      ]
+    },
+    {
+      "shot": 29000,
+      "status": "ok",
+      "n_quality": 40,
+      "n_kept": 4,
+      "kappa": [
+        1.504,
+        1.838
+      ]
+    },
+    {
+      "shot": 29012,
+      "status": "ok",
+      "n_quality": 90,
+      "n_kept": 9,
+      "kappa": [
+        1.629,
+        2.502
+      ]
+    },
+    {
+      "shot": 29024,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29036,
+      "status": "ok",
+      "n_quality": 47,
+      "n_kept": 8,
+      "kappa": [
+        1.649,
+        2.301
+      ]
+    },
+    {
+      "shot": 29048,
+      "status": "ok",
+      "n_quality": 55,
+      "n_kept": 3,
+      "kappa": [
+        1.591,
+        1.786
+      ]
+    },
+    {
+      "shot": 29060,
+      "status": "ok",
+      "n_quality": 36,
+      "n_kept": 2,
+      "kappa": [
+        1.78,
+        1.945
+      ]
+    },
+    {
+      "shot": 29072,
+      "status": "ok",
+      "n_quality": 95,
+      "n_kept": 3,
+      "kappa": [
+        1.511,
+        1.656
+      ]
+    },
+    {
+      "shot": 29084,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29096,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29108,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29120,
+      "status": "ok",
+      "n_quality": 89,
+      "n_kept": 4,
+      "kappa": [
+        1.533,
+        1.763
+      ]
+    },
+    {
+      "shot": 29132,
+      "status": "ok",
+      "n_quality": 46,
+      "n_kept": 3,
+      "kappa": [
+        1.834,
+        1.999
+      ]
+    },
+    {
+      "shot": 29144,
+      "status": "ok",
+      "n_quality": 90,
+      "n_kept": 4,
+      "kappa": [
+        1.534,
+        1.782
+      ]
+    },
+    {
+      "shot": 29156,
+      "status": "ok",
+      "n_quality": 91,
+      "n_kept": 4,
+      "kappa": [
+        1.447,
+        1.663
+      ]
+    },
+    {
+      "shot": 29168,
+      "status": "ok",
+      "n_quality": 64,
+      "n_kept": 6,
+      "kappa": [
+        1.591,
+        2.062
+      ]
+    },
+    {
+      "shot": 29180,
+      "status": "ok",
+      "n_quality": 103,
+      "n_kept": 3,
+      "kappa": [
+        1.423,
+        1.576
+      ]
+    },
+    {
+      "shot": 29192,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29204,
+      "status": "ok",
+      "n_quality": 23,
+      "n_kept": 3,
+      "kappa": [
+        1.745,
+        1.863
+      ]
+    },
+    {
+      "shot": 29216,
+      "status": "ok",
+      "n_quality": 89,
+      "n_kept": 5,
+      "kappa": [
+        1.349,
+        1.657
+      ]
+    },
+    {
+      "shot": 29228,
+      "status": "ok",
+      "n_quality": 86,
+      "n_kept": 5,
+      "kappa": [
+        1.529,
+        1.863
+      ]
+    },
+    {
+      "shot": 29240,
+      "status": "ok",
+      "n_quality": 70,
+      "n_kept": 7,
+      "kappa": [
+        1.741,
+        2.255
+      ]
+    },
+    {
+      "shot": 29252,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29264,
+      "status": "ok",
+      "n_quality": 36,
+      "n_kept": 2,
+      "kappa": [
+        1.8,
+        1.854
+      ]
+    },
+    {
+      "shot": 29276,
+      "status": "ok",
+      "n_quality": 34,
+      "n_kept": 2,
+      "kappa": [
+        1.807,
+        1.909
+      ]
+    },
+    {
+      "shot": 29288,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29300,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29312,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29324,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29336,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29348,
+      "status": "ok",
+      "n_quality": 81,
+      "n_kept": 3,
+      "kappa": [
+        1.399,
+        1.568
+      ]
+    },
+    {
+      "shot": 29360,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29372,
+      "status": "ok",
+      "n_quality": 89,
+      "n_kept": 3,
+      "kappa": [
+        1.52,
+        1.687
+      ]
+    },
+    {
+      "shot": 29384,
+      "status": "ok",
+      "n_quality": 103,
+      "n_kept": 4,
+      "kappa": [
+        1.385,
+        1.655
+      ]
+    },
+    {
+      "shot": 29396,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29408,
+      "status": "ok",
+      "n_quality": 30,
+      "n_kept": 4,
+      "kappa": [
+        1.72,
+        2.009
+      ]
+    },
+    {
+      "shot": 29420,
+      "status": "ok",
+      "n_quality": 41,
+      "n_kept": 4,
+      "kappa": [
+        1.646,
+        1.863
+      ]
+    },
+    {
+      "shot": 29432,
+      "status": "ok",
+      "n_quality": 52,
+      "n_kept": 3,
+      "kappa": [
+        1.837,
+        1.953
+      ]
+    },
+    {
+      "shot": 29444,
+      "status": "ok",
+      "n_quality": 39,
+      "n_kept": 4,
+      "kappa": [
+        1.6,
+        1.867
+      ]
+    },
+    {
+      "shot": 29456,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29468,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29480,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29492,
+      "status": "ok",
+      "n_quality": 59,
+      "n_kept": 3,
+      "kappa": [
+        1.438,
+        1.592
+      ]
+    },
+    {
+      "shot": 29504,
+      "status": "ok",
+      "n_quality": 76,
+      "n_kept": 3,
+      "kappa": [
+        1.41,
+        1.614
+      ]
+    },
+    {
+      "shot": 29516,
+      "status": "ok",
+      "n_quality": 64,
+      "n_kept": 3,
+      "kappa": [
+        1.545,
+        1.691
+      ]
+    },
+    {
+      "shot": 29528,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29540,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29552,
+      "status": "ok",
+      "n_quality": 47,
+      "n_kept": 2,
+      "kappa": [
+        1.943,
+        1.986
+      ]
+    },
+    {
+      "shot": 29564,
+      "status": "ok",
+      "n_quality": 86,
+      "n_kept": 3,
+      "kappa": [
+        1.434,
+        1.637
+      ]
+    },
+    {
+      "shot": 29576,
+      "status": "ok",
+      "n_quality": 87,
+      "n_kept": 4,
+      "kappa": [
+        1.543,
+        1.779
+      ]
+    },
+    {
+      "shot": 29588,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29600,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29612,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29624,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29636,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29648,
+      "status": "ok",
+      "n_quality": 92,
+      "n_kept": 3,
+      "kappa": [
+        1.386,
+        1.554
+      ]
+    },
+    {
+      "shot": 29660,
+      "status": "ok",
+      "n_quality": 87,
+      "n_kept": 3,
+      "kappa": [
+        1.434,
+        1.621
+      ]
+    },
+    {
+      "shot": 29672,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29684,
+      "status": "ok",
+      "n_quality": 112,
+      "n_kept": 2,
+      "kappa": [
+        1.383,
+        1.454
+      ]
+    },
+    {
+      "shot": 29696,
+      "status": "ok",
+      "n_quality": 59,
+      "n_kept": 4,
+      "kappa": [
+        1.641,
+        1.942
+      ]
+    },
+    {
+      "shot": 29708,
+      "status": "ok",
+      "n_quality": 111,
+      "n_kept": 2,
+      "kappa": [
+        1.392,
+        1.499
+      ]
+    },
+    {
+      "shot": 29720,
+      "status": "ok",
+      "n_quality": 114,
+      "n_kept": 3,
+      "kappa": [
+        1.422,
+        1.6
+      ]
+    },
+    {
+      "shot": 29732,
+      "status": "ok",
+      "n_quality": 50,
+      "n_kept": 3,
+      "kappa": [
+        1.45,
+        1.618
+      ]
+    },
+    {
+      "shot": 29744,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29756,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29768,
+      "status": "ok",
+      "n_quality": 112,
+      "n_kept": 2,
+      "kappa": [
+        1.378,
+        1.458
+      ]
+    },
+    {
+      "shot": 29780,
+      "status": "ok",
+      "n_quality": 112,
+      "n_kept": 3,
+      "kappa": [
+        1.348,
+        1.474
+      ]
+    },
+    {
+      "shot": 29792,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29804,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29816,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29828,
+      "status": "ok",
+      "n_quality": 11,
+      "n_kept": 2,
+      "kappa": [
+        1.448,
+        1.469
+      ]
+    },
+    {
+      "shot": 29840,
+      "status": "ok",
+      "n_quality": 66,
+      "n_kept": 4,
+      "kappa": [
+        1.537,
+        1.756
+      ]
+    },
+    {
+      "shot": 29852,
+      "status": "ok",
+      "n_quality": 55,
+      "n_kept": 5,
+      "kappa": [
+        1.521,
+        1.905
+      ]
+    },
+    {
+      "shot": 29864,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29876,
+      "status": "ok",
+      "n_quality": 64,
+      "n_kept": 4,
+      "kappa": [
+        1.496,
+        1.819
+      ]
+    },
+    {
+      "shot": 29888,
+      "status": "ok",
+      "n_quality": 111,
+      "n_kept": 3,
+      "kappa": [
+        1.345,
+        1.478
+      ]
+    },
+    {
+      "shot": 29900,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 29912,
+      "status": "ok",
+      "n_quality": 89,
+      "n_kept": 3,
+      "kappa": [
+        1.435,
+        1.622
+      ]
+    },
+    {
+      "shot": 29924,
+      "status": "ok",
+      "n_quality": 55,
+      "n_kept": 7,
+      "kappa": [
+        1.744,
+        2.271
+      ]
+    },
+    {
+      "shot": 29936,
+      "status": "ok",
+      "n_quality": 81,
+      "n_kept": 4,
+      "kappa": [
+        1.44,
+        1.654
+      ]
+    },
+    {
+      "shot": 29948,
+      "status": "ok",
+      "n_quality": 112,
+      "n_kept": 2,
+      "kappa": [
+        1.387,
+        1.504
+      ]
+    },
+    {
+      "shot": 29960,
+      "status": "ok",
+      "n_quality": 61,
+      "n_kept": 5,
+      "kappa": [
+        1.637,
+        2.037
+      ]
+    },
+    {
+      "shot": 29972,
+      "status": "ok",
+      "n_quality": 54,
+      "n_kept": 7,
+      "kappa": [
+        1.546,
+        2.053
+      ]
+    },
+    {
+      "shot": 29984,
+      "status": "ok",
+      "n_quality": 24,
+      "n_kept": 4,
+      "kappa": [
+        1.688,
+        1.951
+      ]
+    },
+    {
+      "shot": 29996,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30008,
+      "status": "ok",
+      "n_quality": 30,
+      "n_kept": 4,
+      "kappa": [
+        1.435,
+        1.669
+      ]
+    },
+    {
+      "shot": 30020,
+      "status": "ok",
+      "n_quality": 77,
+      "n_kept": 6,
+      "kappa": [
+        1.541,
+        1.976
+      ]
+    },
+    {
+      "shot": 30032,
+      "status": "ok",
+      "n_quality": 86,
+      "n_kept": 3,
+      "kappa": [
+        1.441,
+        1.641
+      ]
+    },
+    {
+      "shot": 30044,
+      "status": "ok",
+      "n_quality": 68,
+      "n_kept": 4,
+      "kappa": [
+        1.642,
+        1.888
+      ]
+    },
+    {
+      "shot": 30056,
+      "status": "ok",
+      "n_quality": 70,
+      "n_kept": 4,
+      "kappa": [
+        1.542,
+        1.767
+      ]
+    },
+    {
+      "shot": 30068,
+      "status": "ok",
+      "n_quality": 80,
+      "n_kept": 3,
+      "kappa": [
+        1.444,
+        1.632
+      ]
+    },
+    {
+      "shot": 30080,
+      "status": "ok",
+      "n_quality": 28,
+      "n_kept": 6,
+      "kappa": [
+        1.527,
+        1.994
+      ]
+    },
+    {
+      "shot": 30092,
+      "status": "ok",
+      "n_quality": 75,
+      "n_kept": 3,
+      "kappa": [
+        1.441,
+        1.614
+      ]
+    },
+    {
+      "shot": 30104,
+      "status": "ok",
+      "n_quality": 57,
+      "n_kept": 4,
+      "kappa": [
+        1.681,
+        1.96
+      ]
+    },
+    {
+      "shot": 30116,
+      "status": "ok",
+      "n_quality": 52,
+      "n_kept": 4,
+      "kappa": [
+        1.644,
+        1.94
+      ]
+    },
+    {
+      "shot": 30128,
+      "status": "ok",
+      "n_quality": 57,
+      "n_kept": 3,
+      "kappa": [
+        1.438,
+        1.617
+      ]
+    },
+    {
+      "shot": 30140,
+      "status": "ok",
+      "n_quality": 111,
+      "n_kept": 2,
+      "kappa": [
+        1.38,
+        1.502
+      ]
+    },
+    {
+      "shot": 30152,
+      "status": "ok",
+      "n_quality": 31,
+      "n_kept": 4,
+      "kappa": [
+        1.746,
+        1.988
+      ]
+    },
+    {
+      "shot": 30164,
+      "status": "ok",
+      "n_quality": 56,
+      "n_kept": 5,
+      "kappa": [
+        1.639,
+        1.968
+      ]
+    },
+    {
+      "shot": 30176,
+      "status": "ok",
+      "n_quality": 73,
+      "n_kept": 4,
+      "kappa": [
+        1.521,
+        1.78
+      ]
+    },
+    {
+      "shot": 30188,
+      "status": "ok",
+      "n_quality": 99,
+      "n_kept": 2,
+      "kappa": [
+        1.37,
+        1.505
+      ]
+    },
+    {
+      "shot": 30200,
+      "status": "ok",
+      "n_quality": 41,
+      "n_kept": 3,
+      "kappa": [
+        1.809,
+        1.962
+      ]
+    },
+    {
+      "shot": 30212,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30224,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30236,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30248,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30260,
+      "status": "ok",
+      "n_quality": 60,
+      "n_kept": 2,
+      "kappa": [
+        1.362,
+        1.474
+      ]
+    },
+    {
+      "shot": 30272,
+      "status": "ok",
+      "n_quality": 93,
+      "n_kept": 3,
+      "kappa": [
+        1.449,
+        1.631
+      ]
+    },
+    {
+      "shot": 30284,
+      "status": "ok",
+      "n_quality": 33,
+      "n_kept": 3,
+      "kappa": [
+        1.829,
+        1.951
+      ]
+    },
+    {
+      "shot": 30296,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30308,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30320,
+      "status": "ok",
+      "n_quality": 80,
+      "n_kept": 5,
+      "kappa": [
+        1.539,
+        1.93
+      ]
+    },
+    {
+      "shot": 30332,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30344,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30356,
+      "status": "ok",
+      "n_quality": 45,
+      "n_kept": 5,
+      "kappa": [
+        1.513,
+        1.852
+      ]
+    },
+    {
+      "shot": 30368,
+      "status": "ok",
+      "n_quality": 61,
+      "n_kept": 4,
+      "kappa": [
+        1.747,
+        1.954
+      ]
+    },
+    {
+      "shot": 30380,
+      "status": "ok",
+      "n_quality": 45,
+      "n_kept": 3,
+      "kappa": [
+        1.647,
+        1.797
+      ]
+    },
+    {
+      "shot": 30392,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30404,
+      "status": "ok",
+      "n_quality": 88,
+      "n_kept": 3,
+      "kappa": [
+        1.436,
+        1.627
+      ]
+    },
+    {
+      "shot": 30416,
+      "status": "ok",
+      "n_quality": 52,
+      "n_kept": 3,
+      "kappa": [
+        1.439,
+        1.618
+      ]
+    },
+    {
+      "shot": 30428,
+      "status": "ok",
+      "n_quality": 41,
+      "n_kept": 3,
+      "kappa": [
+        1.949,
+        2.074
+      ]
+    },
+    {
+      "shot": 30440,
+      "status": "ok",
+      "n_quality": 38,
+      "n_kept": 2,
+      "kappa": [
+        1.831,
+        1.926
+      ]
+    },
+    {
+      "shot": 30452,
+      "status": "incomplete_efm"
+    },
+    {
+      "shot": 30464,
+      "status": "ok",
+      "n_quality": 22,
+      "n_kept": 4,
+      "kappa": [
+        1.736,
+        1.955
+      ]
+    }
+  ],
+  "n_pool": 357,
+  "target_n": 60
+}

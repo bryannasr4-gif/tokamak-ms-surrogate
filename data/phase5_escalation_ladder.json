@@ -1,0 +1,8 @@
+{
+  "what": "Pre-registered aspect-ratio escalation ladder (r0_new 1.6 -> 1.9 / 1.75) to test if |corr(kappa,log m_s)|<0.75 is ever reached",
+  "r0_new_1.6": "WORKING (Phase 5 canonical): A_limiter 2.25, plasma A~2.97, anchors converge 3-7s, kill-gate corr=-0.811",
+  "r0_new_1.9": "BLOCKED: 0/18 anchors converged ('FAILED to compute GS residual'); A_limiter 2.64",
+  "r0_new_1.75": "BLOCKED: first inverse-solve anchor did not converge in >2.5 min (vs 3-7s at r0_new=1.6); A_limiter 2.44",
+  "finding": "A pure RADIAL TRANSFORM of the MAST-U build hits a convergence wall before reaching kappa de-domination (|corr|<0.75): the MAST-U-derived coil set + default plasma initialization cannot hold a well-converged diverted equilibrium slid to conventional aspect ratio. This is an HONEST limitation of the radial-transform device construction, and it REINFORCES the structural conclusion: a genuine kappa-de-dominated 2nd device needs a STRUCTURALLY distinct machine (different passive Z-extent/topology + coil set), not a radial transform. The escalation could be forced with substantial equilibrium tuning (adaptive plasma initial guess, re-placed isoflux targets, relaxed coil limits), but the expected payoff is low (a null) and the convergence wall is itself the informative result.",
+  "decision": "Escalation arm CLOSED as a documented convergence-wall limitation; effort redirected to the higher-value robust-design capability (#2)."
+}

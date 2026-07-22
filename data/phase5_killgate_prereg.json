@@ -1,0 +1,25 @@
+{
+  "phase": "Phase 5 — genuine second device (Device-C) kill-gate",
+  "registered": "2026-06-26",
+  "registered_before_any_device_c_forward_solve": true,
+  "machine": "Device-C = documented higher-aspect-ratio radial transform of validated MAST-U (device2_build.py --r0_old 0.9 --r0_new 1.6; A 1.34->2.25). Escalation ladder if NO-GO: r0_new 1.6 -> 1.9 -> 2.2 (toward conventional A>=2.8).",
+  "protocol": {
+    "blas_threads": "OMP=OPENBLAS=MKL=NUMEXPR=VECLIB=1 (locked)",
+    "solve": "cold forward solves (constrain=None), serialized Device-C machine",
+    "grid": "65x65, expanded Rmax=2.8 for Device-C (plasma sits at larger R)",
+    "fix_n_vessel_modes": 40,
+    "rationale_modes": "40 modes is the CHEAP probe; corr(kappa,log m_s) is a RELATIVE (rank) measure within the probe at a fixed mode count, so the documented 40->80 absolute bias cancels. The design comparison (C4), if GO, uses the converged 80 modes."
+  },
+  "primary_metric": "corr(kappa, log m_s) = Spearman rank correlation on >=150 (target >=250) converged DIVERTED Device-C samples spanning a range of kappa.",
+  "secondary_metric": "per-lever |Spearman(standardized descriptor, log m_s)| for the secondary levers {sq_uo, sq_lo, gap_inner, gap_outer, li, betap, delta}.",
+  "reference": "MAST-U corr(kappa, log m_s) = -0.875 (kappa-dominated).",
+  "DECISION_RULE": {
+    "GO": "|corr(kappa, log m_s)| < 0.75  OR  best secondary lever's |corr| >= 0.7 * |corr(kappa)|.",
+    "NO_GO": "otherwise (kappa still dominant, |corr| ~0.8+ with no rival lever)."
+  },
+  "branch_on_result": {
+    "GO": "proceed to C4: the UNCONSTRAINED design comparison on Device-C (learned-m_s gradient vs reduce-kappa heuristic vs gradient-free; kappa FREE; every step 80-mode solver-confirmed).",
+    "NO_GO": "escalate aspect ratio (bigger r0_new) 1-2 times and re-probe. If kappa stays dominant even at conventional A, STOP and report the honest scoping result: 'kappa-dominance is a general property of tokamak vertical stability, not a MAST-U artifact.' Do NOT run C4 on a kappa-dominated device."
+  },
+  "honesty": "A within-noise 'win' is NOT a win. NO-GO and TIE are real, publishable scoping findings and will be reported plainly, not spun."
+}

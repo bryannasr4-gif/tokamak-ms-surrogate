@@ -1,0 +1,18 @@
+{
+  "n_matched": 3254,
+  "A_to_B_spearman": 0.9887539416848898,
+  "A_to_B_naive_logR2": 0.6481567527599024,
+  "A_to_B_affine_coef": [
+    1.2880719484166392,
+    -0.47978247894072823
+  ],
+  "A_to_B_affine_logR2_val": 0.9128754271361931,
+  "A_to_B_affine_logR2_test": 0.7250111537691522,
+  "truelabel_spearman": 0.9943267873391972,
+  "truelabel_affine_logR2_val": 0.947533095107791,
+  "truelabel_affine_logR2_test": 0.8591478737770818,
+  "truelabel_shift_only_logR2_val": 0.9016870041648753,
+  "marginal_band_spearman_truelabel": 0.9691265641474511,
+  "mean_logms_shift_A_to_B": -0.4981410019934141,
+  "note": "affine fit on TRAIN, evaluated held-out (M1 fix); true-label ceiling = no surrogate"
+}
