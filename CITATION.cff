@@ -10,9 +10,17 @@ type: software
 authors:
   - family-names: "Nasr"
     given-names: "Bryan"
+    orcid: "https://orcid.org/0009-0008-2360-7522"
 version: "0.1.0"
 date-released: "2026-07-21"
 license: MIT
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21499720"
+    description: "Concept DOI (all versions, Zenodo)"
+  - type: doi
+    value: "10.5281/zenodo.21499721"
+    description: "Version DOI (v1, Zenodo)"
 keywords:
   - tokamak
   - vertical stability
