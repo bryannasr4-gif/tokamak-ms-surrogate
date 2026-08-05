@@ -1,0 +1,155 @@
+{
+ "unit": "S3c",
+ "design": "data/audit/strategy/S4A_S3C_DESIGN.md",
+ "amendment": "A1 (council-before; data/research/council/s4a_s3c_design/SYNTHESIS.md)",
+ "frozen_note": "frozen BEFORE the campaign ran; no design-loop outcome existed at freeze time",
+ "confirmatory": true,
+ "question": "does the fixed-kappa surrogate-vs-best-realisable-fixed-lever effect replicate on a fresh disjoint cohort with n fixed in advance and no top-ups?",
+ "cohort": {
+  "n": 28,
+  "n_min_usable": 25,
+  "regime": "marginal",
+  "band": [
+   0.05,
+   0.4
+  ],
+  "selection": "verbatim stratify_new: linspace(0.025,0.975,28) quantile positions over the m_s-sorted pool of FRESH (unused) marginal rows",
+  "start_idx": [
+   3141,
+   1616,
+   2107,
+   2421,
+   2863,
+   1932,
+   2293,
+   805,
+   3275,
+   2470,
+   1422,
+   1199,
+   1969,
+   26,
+   643,
+   2267,
+   1383,
+   1660,
+   2558,
+   105,
+   1270,
+   913,
+   2900,
+   2555,
+   960,
+   1442,
+   398,
+   2625
+  ],
+  "n_prior_used": 56,
+  "pool_size": 396,
+  "m_s_range": [
+   0.137870355990553,
+   0.39575810579185483
+  ]
+ },
+ "arms_confirmatory": [
+  "surrogate",
+  "heuristic:gap_outer-"
+ ],
+ "arms_exploratory": [
+  "heuristic:gap_outer+",
+  "heuristic:sq_uo+",
+  "heuristic:sq_uo-",
+  "heuristic:li+",
+  "heuristic:li-",
+  "heuristic:betap+",
+  "heuristic:betap-"
+ ],
+ "arms_note": "the CONFIRMATORY family is exactly one pre-named comparison (surrogate vs heuristic:gap_outer-, the best realisable lever named IN ADVANCE). The 7 exploratory levers (amendment A1-9) run ONLY after the confirmatory analysis is written and frozen, and exist solely to characterise whether gap_outer- was still the best realisable lever on this fresh cohort; they carry confirmatory=false.",
+ "protocol": {
+  "budget": 18,
+  "ktol": 0.04,
+  "d": 12,
+  "grid": "65x65",
+  "fix_n_vessel_modes": 80,
+  "fwd_tol": 1e-08,
+  "blas_threads": 1,
+  "cold_isolated_solves": true,
+  "loop": "phase25_kappa_lib.run_constrained (same function object as the banked batches)"
+ },
+ "statistics": {
+  "primary": "two-sided Wilcoxon signed-rank on paired gain differences (surrogate - lever), zero_method=pratt",
+  "alpha": 0.05,
+  "family_size": 1,
+  "holm_needed": false,
+  "secondary": [
+   "two-sided sign test",
+   "Wilson 95% CI",
+   "median gains"
+  ],
+  "n_fixed_in_advance": true,
+  "top_ups_permitted": false,
+  "early_stopping": false,
+  "cohort_replacement_permitted": false,
+  "attrition_policy": "analyse once on the usable set; if usable n < 25 the unit is VOID for confirmatory purposes and is NOT restarted; selective reporting of full-n vs reduced-n is forbidden"
+ },
+ "power": {
+  "n": 28,
+  "sign_test_critical_wins": 20,
+  "alpha": 0.05,
+  "power_at_historical_0_75": 0.7501408063949215,
+  "power_at_historical_0_80": 0.9099653413701222,
+  "power_at_useful_0_65": 0.3089484317525891,
+  "min_detectable_win_rate_at_80pct_power": 0.764,
+  "note": "power quoted for the SIGN test, the weaker of the two instruments; the pre-specified PRIMARY is Wilcoxon signed-rank, which has materially more power at the same effect. The 0.65 row is the de-circularised figure: it is a minimum USEFUL win rate chosen without reference to the contested batches."
+ },
+ "bands": [
+  {
+   "order": 1,
+   "band": "ATTRITION-VOID",
+   "cond": "usable n < 25",
+   "consequence": "cannot claim confirmatory status; report screen honestly; NOT restarted"
+  },
+  {
+   "order": 2,
+   "band": "R-REVERSED",
+   "cond": "wilcoxon_p <= 0.05 and median_delta < 0",
+   "consequence": "HARD STOP + escalate: design author writes the report and stops; no draft edit, no negotiation, no further run; the user alone decides"
+  },
+  {
+   "order": 3,
+   "band": "R-REPLICATED",
+   "cond": "wilcoxon_p <= 0.05 and median_delta > 0",
+   "consequence": "add as a second, independently pre-registered confirmatory result in \u00a75.1"
+  },
+  {
+   "order": 4,
+   "band": "R-AMBIGUOUS",
+   "cond": "wilcoxon_p <= 0.05 and median_delta == 0",
+   "consequence": "significant but directionally ambiguous; claim neither replication nor reversal"
+  },
+  {
+   "order": 5,
+   "band": "R-NULL-CONSISTENT",
+   "cond": "wilcoxon_p > 0.05 and median_delta > 0 and win_rate >= 0.60",
+   "consequence": "direction-consistent underpowered null: report in \u00a75.1 with full numbers; the earlier replication may still be described as replicated ONCE, but every such statement must carry the second attempt's non-significance in the same sentence"
+  },
+  {
+   "order": 6,
+   "band": "R-NULL-INCONSISTENT",
+   "cond": "otherwise (catch-all)",
+   "consequence": "the effect did not appear on a clean fixed-n cohort: DEMOTE the fixed-kappa marginal claim to 'inconsistent across pre-registered cohorts', move the pooled result out of the headline, and add the failure to the scope box"
+  }
+ ],
+ "inputs_sha256": {
+  "data/dataset_v1_80.parquet": "7301cc50109189c4401ca7cbfe56c782c05c07fa8aab1d53c9e7675f1f8204e1",
+  "data/phase2_dim_setup.json": "19f24fc23aa0e3172654226199d64a2b48ad1d9bf14e8e9591ca5673be42f95a",
+  "data/phase25_kappa_setup.json": "884f021461e84e48b657d196f8024d91bd5b8feaadf659f822147f0b6faa4f2b",
+  "data/phase4_power_setup.json": "3d880e2cf392b0fb6b2891022a4fbb48babd98c9cc05ce3cd5ecb70916a29814",
+  "data/phase4_power2_setup.json": "c2fa5fb6d3a87e1465192b5d8b05677929298f525afe189deb4dfac825133508",
+  "experiments/phase25_kappa_lib.py": "f00f3c0f936a0052aaa343bddb70196896ae6358ed1523985bfe41c0d467fd0b",
+  "experiments/s3c_cohort_worker.py": "954e70d699a038121822a15fa0c94770aa75bc375d75c11d35e56604e03373de"
+ },
+ "setup_sha256": "93fcf5c4eb66d7780ff407ec7dce753e4f4ea8594ac7a1c49bcc80e50fd13063",
+ "jobs_sha256": "49d44feb7b90a254506047539778fdb98280c9a025799629d8da6ee9cb3c2b04",
+ "jobs_levers_sha256": "a9bc3ec0a1d897c5e2fe894afabeb59bf748deae56cc221eaa6b9ce19cde6192"
+}

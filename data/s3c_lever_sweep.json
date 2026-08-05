@@ -1,0 +1,61 @@
+{
+ "unit": "S3c-levers",
+ "exploratory": true,
+ "confirmatory": false,
+ "not_reportable_magnitudes": true,
+ "purpose": "amendment A1-9: was the PRE-NAMED baseline still the best realisable lever on this fresh cohort? (winner's-curse check demanded by 2 council seats)",
+ "ran_after_confirmatory_band": "R-REPLICATED",
+ "per_lever_median_gain": [
+  {
+   "method": "heuristic:gap_outer-",
+   "n": 28,
+   "median_gain": 0.39737275666960326
+  },
+  {
+   "method": "heuristic:betap+",
+   "n": 28,
+   "median_gain": 0.22504393318265908
+  },
+  {
+   "method": "heuristic:sq_uo+",
+   "n": 28,
+   "median_gain": 0.17308780238625
+  },
+  {
+   "method": "heuristic:li-",
+   "n": 28,
+   "median_gain": 0.08309329117711436
+  },
+  {
+   "method": "heuristic:sq_uo-",
+   "n": 28,
+   "median_gain": 0.01462723942451312
+  },
+  {
+   "method": "heuristic:li+",
+   "n": 28,
+   "median_gain": 0.003562691678669433
+  },
+  {
+   "method": "heuristic:gap_outer+",
+   "n": 28,
+   "median_gain": 0.001498664508842007
+  },
+  {
+   "method": "heuristic:betap-",
+   "n": 28,
+   "median_gain": 7.535063310248891e-07
+  }
+ ],
+ "pre_named_lever": "heuristic:gap_outer-",
+ "pre_named_rank": 1,
+ "cohort_best_lever": "heuristic:gap_outer-",
+ "pre_named_was_still_best": true,
+ "surrogate_vs_cohort_best": {
+  "n": 28,
+  "wins": 25,
+  "median_delta": 0.2180594889796424,
+  "wilcoxon_p": 2.380460500717163e-05,
+  "note": "EXPLORATORY. The confirmatory test is surrogate vs the PRE-NAMED lever only; this cell is a post-hoc characterisation and is not a registered claim."
+ }
+}

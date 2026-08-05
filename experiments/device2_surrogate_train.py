@@ -1,6 +1,6 @@
 """
 device2_surrogate_train.py -- train a Device-C-retrained shape->m_s surrogate ensemble (the CLEAN
-ABLATION for Phase 5 / Device-C). Same heteroscedastic deep-ensemble recipe as
+ABLATION for Phase 5 C4; SECOND_DEVICE.md Step 3b). Same heteroscedastic deep-ensemble recipe as
 phase2_train.train_surrogate (8 members, bootstrap, warmup 800, 2600 epochs, Adam 3e-3, wd 1e-4),
 trained on an 80-mode Device-C dataset (shape descriptors -> [log m_s, log gamma]). Saves
 data/phase2_models/surrogate_C.pt and reports held-out log-R^2 by regime.

@@ -1,0 +1,178 @@
+{
+ "unit": "S3c-council-checks",
+ "exploratory": true,
+ "confirmatory": false,
+ "not_reportable_magnitudes": true,
+ "new_solves": 0,
+ "provenance": "computed from data/phase4_power3_results.json + data/phase4_power3_levers.json; no new solver runs; adjudication support for the council-after round data/research/council/s4a_s3c_result/",
+ "purpose": "independently test three checkable council objections (CLAUDE.md section 6: a council finding is never adopted on trust)",
+ "bootstrap": {
+  "n_boot": 20000,
+  "seed": 20260802
+ },
+ "median_gain_by_method": {
+  "heuristic:betap+": 0.22504393318265908,
+  "heuristic:betap-": 7.535063310248891e-07,
+  "heuristic:gap_outer+": 0.001498664508842007,
+  "heuristic:gap_outer-": 0.39737275666960326,
+  "heuristic:li+": 0.003562691678669433,
+  "heuristic:li-": 0.08309329117711436,
+  "heuristic:sq_uo+": 0.17308780238625,
+  "heuristic:sq_uo-": 0.01462723942451312,
+  "surrogate": 0.5639869330877021
+ },
+ "lever_ranking": [
+  "heuristic:gap_outer-",
+  "heuristic:betap+",
+  "heuristic:sq_uo+",
+  "heuristic:li-",
+  "heuristic:sq_uo-",
+  "heuristic:li+",
+  "heuristic:gap_outer+",
+  "heuristic:betap-"
+ ],
+ "runner_up": "heuristic:betap+",
+ "C1_prenamed_vs_runner_up": {
+  "comparison": "heuristic:gap_outer- - heuristic:betap+",
+  "n": 28,
+  "wins": 19,
+  "losses": 8,
+  "ties": 1,
+  "median": 0.1450145358607807,
+  "median_ci95": [
+   0.02635281943969936,
+   0.2541065872892004
+  ],
+  "wilcoxon_p": 0.0016102338039827573,
+  "sign_p": 0.052238985896110535,
+  "significant": true
+ },
+ "C2_surrogate_vs_each_lever": {
+  "per_lever": {
+   "heuristic:gap_outer-": {
+    "n": 28,
+    "wins": 25,
+    "losses": 3,
+    "ties": 0,
+    "median": 0.2180594889796424,
+    "median_ci95": [
+     0.10552866773861219,
+     0.34881440315979817
+    ],
+    "wilcoxon_p": 2.380460500717163e-05,
+    "sign_p": 2.744048833847046e-05
+   },
+   "heuristic:betap+": {
+    "n": 28,
+    "wins": 28,
+    "losses": 0,
+    "ties": 0,
+    "median": 0.3515975776803202,
+    "median_ci95": [
+     0.30968069483926636,
+     0.4942806042940183
+    ],
+    "wilcoxon_p": 7.450580596923828e-09,
+    "sign_p": 7.450580596923828e-09
+   },
+   "heuristic:sq_uo+": {
+    "n": 28,
+    "wins": 27,
+    "losses": 1,
+    "ties": 0,
+    "median": 0.3731813385097015,
+    "median_ci95": [
+     0.2994364584122715,
+     0.5645597560148223
+    ],
+    "wilcoxon_p": 2.2351741790771484e-08,
+    "sign_p": 2.1606683731079102e-07
+   },
+   "heuristic:li-": {
+    "n": 28,
+    "wins": 26,
+    "losses": 2,
+    "ties": 0,
+    "median": 0.5046868265058334,
+    "median_ci95": [
+     0.38175716630235434,
+     0.5804285555860625
+    ],
+    "wilcoxon_p": 3.725290298461914e-08,
+    "sign_p": 3.032386302947998e-06
+   },
+   "heuristic:sq_uo-": {
+    "n": 28,
+    "wins": 28,
+    "losses": 0,
+    "ties": 0,
+    "median": 0.555718243195874,
+    "median_ci95": [
+     0.47196990586970733,
+     0.6753025652092941
+    ],
+    "wilcoxon_p": 7.450580596923828e-09,
+    "sign_p": 7.450580596923828e-09
+   },
+   "heuristic:li+": {
+    "n": 28,
+    "wins": 28,
+    "losses": 0,
+    "ties": 0,
+    "median": 0.5623103329732115,
+    "median_ci95": [
+     0.4943569887236203,
+     0.6991776804678373
+    ],
+    "wilcoxon_p": 7.450580596923828e-09,
+    "sign_p": 7.450580596923828e-09
+   },
+   "heuristic:gap_outer+": {
+    "n": 28,
+    "wins": 28,
+    "losses": 0,
+    "ties": 0,
+    "median": 0.556788976028387,
+    "median_ci95": [
+     0.47838571340154135,
+     0.6833351232535645
+    ],
+    "wilcoxon_p": 7.450580596923828e-09,
+    "sign_p": 7.450580596923828e-09
+   },
+   "heuristic:betap-": {
+    "n": 28,
+    "wins": 28,
+    "losses": 0,
+    "ties": 0,
+    "median": 0.5477110125924913,
+    "median_ci95": [
+     0.4717983011339987,
+     0.6857667696541337
+    ],
+    "wilcoxon_p": 7.450580596923828e-09,
+    "sign_p": 7.450580596923828e-09
+   }
+  },
+  "holm_adjusted_p": {
+   "heuristic:betap+": 5.960464477539063e-08,
+   "heuristic:sq_uo-": 5.960464477539063e-08,
+   "heuristic:li+": 5.960464477539063e-08,
+   "heuristic:gap_outer+": 5.960464477539063e-08,
+   "heuristic:betap-": 5.960464477539063e-08,
+   "heuristic:sq_uo+": 6.705522537231445e-08,
+   "heuristic:li-": 7.450580596923828e-08,
+   "heuristic:gap_outer-": 2.380460500717163e-05
+  },
+  "surrogate_beats_all_uncorrected": true,
+  "surrogate_beats_all_holm": true,
+  "note": "EXPLORATORY. The confirmatory family remains the single pre-named comparison; these 8 cells are a post-hoc characterisation and are not registered claims."
+ },
+ "C3_wilson_vs_useful": {
+  "wilson_lower": 0.7280414845132784,
+  "min_useful_rate": 0.65,
+  "lower_bound_exceeds_useful": true,
+  "margin": 0.07804148451327841,
+  "power_at_useful_rate": 0.3089484317525891
+ }
+}

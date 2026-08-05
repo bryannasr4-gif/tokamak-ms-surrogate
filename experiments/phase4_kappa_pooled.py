@@ -73,6 +73,9 @@ def main():
         rsur = arr(repl_rows, "surrogate"); rfix = arr(repl_rows, "best_fixed_lever")
         ok = np.isfinite(rsur) & np.isfinite(rfix)
         if ok.sum() > 0:
+            # median_gain_surrogate is the COHORT median. On the current data it coincidentally
+            # equals the pooled n=56 median: the same two rows (0.55947.., 0.56564..) are the middle
+            # order-statistic pair of both sets (adjudicated 2026-07-31, PPCF_BLOCKERS.md B4).
             out["marginal_replication"] = dict(batch=latest, n=int(ok.sum()),
                 vs_best_fixed_lever=beat(rsur[ok], rfix[ok]),
                 median_gain_surrogate=med(rsur[ok]), median_gain_fixed=med(rfix[ok]))

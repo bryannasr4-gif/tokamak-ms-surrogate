@@ -73,6 +73,8 @@ class GRecorder:
         self.accepted = [dict(n=1, ms=float(m_s_start), kappa=float(kappa_start),
                               desc=start_desc, u=[float(v) for v in start_u])]
         self.reject = dict(kappa_drift=0, no_improve=0, invalid=0)
+        self.dir_cos = []      # S4a diagnostic only: cos(full, masked) per gradient evaluation
+        self.pin_value = None  # S4a arm B: the pinned descriptor value (None on every other path)
 
     def log_accept(self, ms, kappa, desc, u):
         self.n += 1
@@ -89,27 +91,58 @@ class GRecorder:
         self.traj.append([self.n, float(self.best), float(self.kappa_start)])
 
     def result(self):
-        return dict(m_s_start=float(self.m_s_start), kappa_start=float(self.kappa_start),
-                    regime=self.regime, n_solves=self.n, best_ms=float(self.best),
-                    gain=float(self.best - self.m_s_start), kappa_final=float(self.best_desc["kappa"]),
-                    kappa_drift=float(abs(self.best_desc["kappa"] - self.kappa_start)),
-                    best_u=self.best_u, best_desc=self.best_desc, traj=self.traj,
-                    accepted=self.accepted, reject=self.reject)
+        r = dict(m_s_start=float(self.m_s_start), kappa_start=float(self.kappa_start),
+                 regime=self.regime, n_solves=self.n, best_ms=float(self.best),
+                 gain=float(self.best - self.m_s_start), kappa_final=float(self.best_desc["kappa"]),
+                 kappa_drift=float(abs(self.best_desc["kappa"] - self.kappa_start)),
+                 best_u=self.best_u, best_desc=self.best_desc, traj=self.traj,
+                 accepted=self.accepted, reject=self.reject)
+        if self.dir_cos:                      # present only on the S4a ablated path
+            r["dir_cos"] = self.dir_cos
+        if self.pin_value is not None:        # present only on S4a arm B
+            r["pin_value"] = self.pin_value
+        return r
 
 
-def run_surrogate(tok, models, smap, ds, budget, k_start, start_desc, kind="surrogate", seed=0):
+def run_surrogate(tok, models, smap, ds, budget, k_start, start_desc, kind="surrogate", seed=0,
+                  zero_feat_i=None, mask_value=False):
     """kappa-constrained ascent with FULL recording.
     kind='surrogate'   -> learned-m_s gradient, projected orthogonal to grad kappa (secondary levers).
     kind='kappa_nudge' -> deliberately DESCEND kappa (UNprojected -grad kappa), accept only within
-                          KTOL -> quantifies how much the residual +-KTOL kappa freedom alone buys."""
+                          KTOL -> quantifies how much the residual +-KTOL kappa freedom alone buys.
+
+    zero_feat_i (unit S4a, 2026-07-31): if not None, the named DESCRIPTOR channel of
+    d(log m_s)/d(descriptors) is zeroed before back-propagation to x -- the l_i ablation. The
+    DEFAULT (None) takes the byte-identical original code path, so every banked gallery result
+    reproduces exactly (asserted by the S4a determinism control).
+
+    mask_value (S4a ARM B, added by the council-before amendment A1): when True, the line-search
+    ALSO scores candidates with that descriptor pinned to its start value, so the surrogate's
+    value function cannot compensate for the masked gradient. Arm A (mask_value=False) tests the
+    GRADIENT channel -- the manuscript's actual claim; Arm B (mask_value=True) is the 'pure'
+    ablation three council seats independently demanded. Note the line search only ever selects a
+    step MAGNITUDE along the already-fixed masked ray, so arm A's scoring cannot restore the
+    unmasked DIRECTION; arm B bounds the residual concern."""
     ms0, k0, desc0, _ = true_full(tok, ds.u_of_x(ds.x0))
     rc = GRecorder(ms0, k0 if np.isfinite(k0) else k_start, "?", desc0 or start_desc, ds.x0)
     best_x = ds.x0.copy()
     step0 = MAX_STEP
+    # S4a arm B: pin value = the ShapeMap-predicted descriptor at the START, frozen once.
+    pin_val = (KL.ds_feature(smap, ds, ds.x0, zero_feat_i)
+               if (mask_value and zero_feat_i is not None) else None)
+    if pin_val is not None:
+        rc.pin_value = float(pin_val)
     while rc.n < budget:
         gk = KL._grad_feature(None, smap, ds, best_x, KAPPA_I)
         if kind == "surrogate":
-            graw = KL._grad_feature(None, smap, ds, best_x, None, is_ms=True, models=models)
+            if zero_feat_i is None:
+                graw = KL._grad_feature(None, smap, ds, best_x, None, is_ms=True, models=models)
+            else:
+                gfull = KL._grad_feature(None, smap, ds, best_x, None, is_ms=True, models=models)
+                graw = KL._grad_ms_zeroed(models, smap, ds, best_x, zero_feat_i)
+                nf, nm = np.linalg.norm(gfull), np.linalg.norm(graw)
+                rc.dir_cos.append([float(np.dot(gfull, graw) / (nf * nm + 1e-12)),
+                                   float(nf), float(nm)])   # diagnostic ONLY; not used below
             direction = KL._project_off_kappa(graw, gk)   # secondary levers only
         else:  # kappa_nudge: descend kappa directly (the residual-kappa-freedom baseline)
             direction = -gk
@@ -122,8 +155,12 @@ def run_surrogate(tok, models, smap, ds, budget, k_start, start_desc, kind="surr
         cand, sc_best = None, -1e18
         for mag in (step0, step0 / 2, step0 / 4):
             xc = ds.clip(best_x + mag * direction)
-            sc = (KL._surr_ms(models, smap, ds, xc) if kind == "surrogate"
-                  else -KL.ds_feature(smap, ds, xc, KAPPA_I))
+            if kind != "surrogate":
+                sc = -KL.ds_feature(smap, ds, xc, KAPPA_I)
+            elif pin_val is None:
+                sc = KL._surr_ms(models, smap, ds, xc)
+            else:
+                sc = KL._surr_ms_pinned(models, smap, ds, xc, zero_feat_i, pin_val)
             if sc > sc_best:
                 sc_best, cand = sc, xc
         ms, kappa, desc, _ = true_full(tok, ds.u_of_x(cand))

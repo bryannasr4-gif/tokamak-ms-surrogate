@@ -1,6 +1,6 @@
 """
 device2_shapemap_train.py -- train a Device-C ShapeMap (CONTROL -> SHAPE descriptors) for the
-zero-shot transfer framing (Phase 5 / Device-C). The shape->m_s surrogate transfers from
+zero-shot transfer framing (SECOND_DEVICE.md Step 3a). The shape->m_s surrogate transfers from
 MAST-U UNCHANGED (m_s is shape-determined; Portone cross-check confirms the convention holds on
 Device-C); but the controls->shape map is machine-specific, so we train a Device-C ShapeMap on the
 kill-gate probe samples (controls->descriptors; cheap, NO new solves -- shape descriptors are

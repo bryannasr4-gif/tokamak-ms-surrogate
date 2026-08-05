@@ -1,6 +1,6 @@
 """
-device2_design_lib.py -- the UNCONSTRAINED design loop for the Device-C headline
-(Phase 5 / Device-C). kappa is FREE (no projection, no kappa-drift rejection);
+device2_design_lib.py -- the UNCONSTRAINED design loop for the genuine-second-device headline
+(SECOND_DEVICE.md Step 3 / Phase 5 C4). kappa is FREE (no projection, no kappa-drift rejection);
 the question is whether the learned-m_s gradient beats the reduce-kappa heuristic AND gradient-free
 search at raising TRUE m_s on Device-C, every step 80-mode solver-confirmed.
 

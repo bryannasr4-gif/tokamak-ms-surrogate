@@ -54,6 +54,31 @@ def _grad_feature(models_or_smap, smap, ds, x_np, feat_i, is_ms=False, models=No
     return g.numpy()
 
 
+def _grad_ms_zeroed(models, smap, ds, x_np, zero_feat_i):
+    """grad_x of (log m_s) with ONE descriptor channel of d(log m_s)/d(descriptors) zeroed before
+    back-propagation to x -- the S4a ablation (unit S4a, 2026-07-31; design
+    data/audit/strategy/S4A_S3C_DESIGN.md).
+
+    Implemented as an explicit vector-Jacobian product so the mask is applied in DESCRIPTOR space
+    (where l_i lives), not in the 12-dim PCA control space. With zero_feat_i=None this returns the
+    production gradient bit-identically (verified: max rel diff 0.00e+00 vs _grad_feature, see
+    experiments/s34_preflight.py §7) -- so it is safe as a drop-in, but callers on the unablated
+    path deliberately still use _grad_feature so that path is untouched byte-for-byte.
+    """
+    gs = []
+    for m in models:
+        x = torch.tensor(x_np, dtype=torch.float32, requires_grad=True)
+        d = smap(ds.u_of_x_t(x).unsqueeze(0))          # (1, n_shape_features)
+        out = m(d)[0, 0]                                # log m_s
+        g_d, = torch.autograd.grad(out, d, retain_graph=True)
+        if zero_feat_i is not None:
+            g_d = g_d.clone()
+            g_d[0, int(zero_feat_i)] = 0.0
+        g_x, = torch.autograd.grad(d, x, grad_outputs=g_d)
+        gs.append(g_x.numpy())
+    return np.mean(gs, 0)
+
+
 def _project_off_kappa(g, gk):
     gkn = gk / (np.linalg.norm(gk) + 1e-12)
     return g - np.dot(g, gkn) * gkn
@@ -153,6 +178,20 @@ def run_constrained(tok, models, smap, ds, budget, kind, k_start, rng=None):
                 step0 = MAX_STEP / 2
         traj.append((n, best))
     return dict(traj=traj, n_solves=n, best_ms=best, kappa_start=k_start)
+
+
+def _surr_ms_pinned(models, smap, ds, x_np, feat_i, pin_value):
+    """Surrogate m_s scored with ONE descriptor PINNED to a fixed value -- i.e. 'score this
+    candidate as if <feat> had never moved from its start value'. Used only by the S4a arm B
+    (gradient AND value-function ablation), which the council-before round required as the
+    'pure' ablation. With feat_i=None this is identical to _surr_ms."""
+    with torch.no_grad():
+        u = ds.u_of_x_t(torch.tensor(x_np, dtype=torch.float32))
+        d = smap(u.unsqueeze(0))
+        if feat_i is not None:
+            d = d.clone()
+            d[0, int(feat_i)] = float(pin_value)
+        return float(torch.stack([m(d)[0, 0] for m in models]).mean().exp())
 
 
 def ds_feature(smap, ds, x_np, feat_i):

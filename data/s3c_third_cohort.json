@@ -1,0 +1,628 @@
+{
+ "unit": "S3c",
+ "design": "data/audit/strategy/S4A_S3C_DESIGN.md",
+ "amendment": "A1 (council-before; data/research/council/s4a_s3c_design/SYNTHESIS.md)",
+ "prereg": "data/s3c_prereg.json",
+ "prereg_sha256": "8b35195494712a951a91558148d68e53e9374bf492756aaed16ad0f18a0cfecd",
+ "confirmatory": true,
+ "not_reportable_magnitudes": true,
+ "cohort": {
+  "n_registered": 28,
+  "n_usable": 28,
+  "n_min": 25,
+  "start_idx": [
+   3141,
+   1616,
+   2107,
+   2421,
+   2863,
+   1932,
+   2293,
+   805,
+   3275,
+   2470,
+   1422,
+   1199,
+   1969,
+   26,
+   643,
+   2267,
+   1383,
+   1660,
+   2558,
+   105,
+   1270,
+   913,
+   2900,
+   2555,
+   960,
+   1442,
+   398,
+   2625
+  ]
+ },
+ "arms": [
+  "surrogate",
+  "heuristic:gap_outer-"
+ ],
+ "budget": 18,
+ "ktol": 0.04,
+ "power": {
+  "n": 28,
+  "sign_test_critical_wins": 20,
+  "alpha": 0.05,
+  "power_at_historical_0_75": 0.7501408063949215,
+  "power_at_historical_0_80": 0.9099653413701222,
+  "power_at_useful_0_65": 0.3089484317525891,
+  "min_detectable_win_rate_at_80pct_power": 0.764,
+  "note": "power quoted for the SIGN test, the weaker of the two instruments; the pre-specified PRIMARY is Wilcoxon signed-rank, which has materially more power at the same effect. The 0.65 row is the de-circularised figure: it is a minimum USEFUL win rate chosen without reference to the contested batches."
+ },
+ "validity_screen": {
+  "n_usable": 28,
+  "n_failed": 0,
+  "rows": [
+   {
+    "start_i": 0,
+    "idx": 3141,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 1,
+    "idx": 1616,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 2,
+    "idx": 2107,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 3,
+    "idx": 2421,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 4,
+    "idx": 2863,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 5,
+    "idx": 1932,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 6,
+    "idx": 2293,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 7,
+    "idx": 805,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 8,
+    "idx": 3275,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 9,
+    "idx": 2470,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 10,
+    "idx": 1422,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 11,
+    "idx": 1199,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 12,
+    "idx": 1969,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 13,
+    "idx": 26,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 14,
+    "idx": 643,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 15,
+    "idx": 2267,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 16,
+    "idx": 1383,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 17,
+    "idx": 1660,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 18,
+    "idx": 2558,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 19,
+    "idx": 105,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 20,
+    "idx": 1270,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 21,
+    "idx": 913,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 22,
+    "idx": 2900,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 23,
+    "idx": 2555,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 24,
+    "idx": 960,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 25,
+    "idx": 1442,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 26,
+    "idx": 398,
+    "ok": true,
+    "problems": []
+   },
+   {
+    "start_i": 27,
+    "idx": 2625,
+    "ok": true,
+    "problems": []
+   }
+  ]
+ },
+ "primary": {
+  "test": "wilcoxon signed-rank two-sided (pratt)",
+  "n": 28,
+  "median_delta": 0.2180594889796424,
+  "wilcoxon_p": 2.380460500717163e-05,
+  "alpha": 0.05,
+  "significant": true
+ },
+ "secondary": {
+  "wins_surrogate": 25,
+  "losses": 3,
+  "ties": 0,
+  "win_rate": 0.8928571428571429,
+  "wilson95": [
+   0.7280414845132784,
+   0.9628816331707001
+  ],
+  "sign_p": 2.744048833847046e-05,
+  "median_gain_surrogate": 0.5639869330877021,
+  "median_gain_lever": 0.39737275666960326
+ },
+ "pairs": [
+  {
+   "start_i": 0,
+   "idx": 3141,
+   "m_s_start": 0.137870355990553,
+   "kappa_start": 2.026473315348866,
+   "gain_surrogate": 0.7031146162346,
+   "gain_lever": 0.3110268000417711,
+   "delta": 0.39208781619282895,
+   "best_ms_surrogate": 0.840984972225153,
+   "best_ms_lever": 0.4488971560323241,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 1,
+   "idx": 1616,
+   "m_s_start": 0.16079722965461732,
+   "kappa_start": 2.0944783643854117,
+   "gain_surrogate": 0.5596390319677748,
+   "gain_lever": 0.33128941708176773,
+   "delta": 0.22834961488600702,
+   "best_ms_surrogate": 0.720436261622392,
+   "best_ms_lever": 0.4920866467363851,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 2,
+   "idx": 2107,
+   "m_s_start": 0.1778127356329618,
+   "kappa_start": 2.168787252513027,
+   "gain_surrogate": 0.48351016068826497,
+   "gain_lever": 0.4226351666934249,
+   "delta": 0.06087499399484009,
+   "best_ms_surrogate": 0.6613228963212268,
+   "best_ms_lever": 0.6004479023263867,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 3,
+   "idx": 2421,
+   "m_s_start": 0.1850184703558276,
+   "kappa_start": 2.1333912417464975,
+   "gain_surrogate": 0.49362669783072044,
+   "gain_lever": 0.5779334887391612,
+   "delta": -0.08430679090844073,
+   "best_ms_surrogate": 0.6786451681865481,
+   "best_ms_lever": 0.7629519590949888,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 4,
+   "idx": 2863,
+   "m_s_start": 0.19713185410625642,
+   "kappa_start": 2.054507288376512,
+   "gain_surrogate": 0.837664326569605,
+   "gain_lever": 0.35733830996035143,
+   "delta": 0.48032601660925356,
+   "best_ms_surrogate": 1.0347961806758614,
+   "best_ms_lever": 0.5544701640666079,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 5,
+   "idx": 1932,
+   "m_s_start": 0.21384102405551844,
+   "kappa_start": 2.0893303525783455,
+   "gain_surrogate": 0.8538075346025729,
+   "gain_lever": 0.46052833087411216,
+   "delta": 0.3932792037284607,
+   "best_ms_surrogate": 1.0676485586580913,
+   "best_ms_lever": 0.6743693549296306,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 6,
+   "idx": 2293,
+   "m_s_start": 0.22322305214323315,
+   "kappa_start": 2.060347036860674,
+   "gain_surrogate": 0.8813786422329714,
+   "gain_lever": 0.3966631166137907,
+   "delta": 0.48471552561918063,
+   "best_ms_surrogate": 1.1046016943762045,
+   "best_ms_lever": 0.6198861687570238,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 7,
+   "idx": 805,
+   "m_s_start": 0.23875681659715586,
+   "kappa_start": 2.04383194315899,
+   "gain_surrogate": 0.6786405572748939,
+   "gain_lever": 0.4109398834044734,
+   "delta": 0.2677006738704205,
+   "best_ms_surrogate": 0.9173973738720498,
+   "best_ms_lever": 0.6496967000016293,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 8,
+   "idx": 3275,
+   "m_s_start": 0.24851219605820668,
+   "kappa_start": 1.9850146461397467,
+   "gain_surrogate": 0.251241830232202,
+   "gain_lever": 0.4440196343120438,
+   "delta": -0.1927778040798418,
+   "best_ms_surrogate": 0.49975402629040866,
+   "best_ms_lever": 0.6925318303702505,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 9,
+   "idx": 2470,
+   "m_s_start": 0.2596175919814745,
+   "kappa_start": 1.6748944374987476,
+   "gain_surrogate": 2.97702299983588,
+   "gain_lever": 3.2637818430480405,
+   "delta": -0.2867588432121604,
+   "best_ms_surrogate": 3.2366405918173546,
+   "best_ms_lever": 3.523399435029515,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 10,
+   "idx": 1422,
+   "m_s_start": 0.26675392222816274,
+   "kappa_start": 2.015130751747168,
+   "gain_surrogate": 0.630917650532276,
+   "gain_lever": 0.08778970529917596,
+   "delta": 0.5431279452331,
+   "best_ms_surrogate": 0.8976715727604387,
+   "best_ms_lever": 0.3545436275273387,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 11,
+   "idx": 1199,
+   "m_s_start": 0.27556092063196064,
+   "kappa_start": 2.051896351200036,
+   "gain_surrogate": 0.5683348342076293,
+   "gain_lever": 0.4212591917768262,
+   "delta": 0.14707564243080312,
+   "best_ms_surrogate": 0.84389575483959,
+   "best_ms_lever": 0.6968201124087868,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 12,
+   "idx": 1969,
+   "m_s_start": 0.2866639595308254,
+   "kappa_start": 2.0168759731906056,
+   "gain_surrogate": 1.0128339316227923,
+   "gain_lever": 0.4621153997325999,
+   "delta": 0.5507185318901924,
+   "best_ms_surrogate": 1.2994978911536177,
+   "best_ms_lever": 0.7487793592634253,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 13,
+   "idx": 26,
+   "m_s_start": 0.29503406296930135,
+   "kappa_start": 1.970031390800035,
+   "gain_surrogate": 0.7126908017177869,
+   "gain_lever": 0.3651607836980425,
+   "delta": 0.34753001801974437,
+   "best_ms_surrogate": 1.0077248646870882,
+   "best_ms_lever": 0.6601948466673438,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 14,
+   "idx": 643,
+   "m_s_start": 0.2999709103053962,
+   "kappa_start": 2.0020597267642057,
+   "gain_surrogate": 0.760198531525641,
+   "gain_lever": 0.3469981763546353,
+   "delta": 0.4132003551710057,
+   "best_ms_surrogate": 1.0601694418310372,
+   "best_ms_lever": 0.6469690866600315,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 15,
+   "idx": 2267,
+   "m_s_start": 0.3064656646616905,
+   "kappa_start": 2.0452935399540615,
+   "gain_surrogate": 0.8994056424934149,
+   "gain_lever": 0.5578282559720922,
+   "delta": 0.34157738652132275,
+   "best_ms_surrogate": 1.2058713071551055,
+   "best_ms_lever": 0.8642939206337826,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 16,
+   "idx": 1383,
+   "m_s_start": 0.31641500986820487,
+   "kappa_start": 2.13031850755932,
+   "gain_surrogate": 0.5184469760864627,
+   "gain_lever": 0.41042322576878126,
+   "delta": 0.10802375031768147,
+   "best_ms_surrogate": 0.8348619859546675,
+   "best_ms_lever": 0.7268382356369861,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 17,
+   "idx": 1660,
+   "m_s_start": 0.3235509316226064,
+   "kappa_start": 1.9615917708660262,
+   "gain_surrogate": 0.30293020667727066,
+   "gain_lever": 4.878877597480624e-07,
+   "delta": 0.3029297187895109,
+   "best_ms_surrogate": 0.6264811382998771,
+   "best_ms_lever": 0.32355141951036615,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 18,
+   "idx": 2558,
+   "m_s_start": 0.3328357333373995,
+   "kappa_start": 2.1308188143512288,
+   "gain_surrogate": 0.41079149590057534,
+   "gain_lever": 0.4001490236071093,
+   "delta": 0.010642472293466043,
+   "best_ms_surrogate": 0.7436272292379749,
+   "best_ms_lever": 0.7329847569445088,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 19,
+   "idx": 105,
+   "m_s_start": 0.3396793337165482,
+   "kappa_start": 2.091336632795908,
+   "gain_surrogate": 0.36029027522801943,
+   "gain_lever": 0.34025088416078525,
+   "delta": 0.02003939106723418,
+   "best_ms_surrogate": 0.6999696089445676,
+   "best_ms_lever": 0.6799302178773334,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 20,
+   "idx": 1270,
+   "m_s_start": 0.3473337785764796,
+   "kappa_start": 1.9761700082607296,
+   "gain_surrogate": 0.2335508875839446,
+   "gain_lever": 0.06410120836252037,
+   "delta": 0.16944967922142423,
+   "best_ms_surrogate": 0.5808846661604242,
+   "best_ms_lever": 0.411434986939,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 21,
+   "idx": 913,
+   "m_s_start": 0.3523227466259624,
+   "kappa_start": 2.0234691148164643,
+   "gain_surrogate": 0.504458076109508,
+   "gain_lever": 0.29668871303623023,
+   "delta": 0.20776936307327776,
+   "best_ms_surrogate": 0.8567808227354704,
+   "best_ms_lever": 0.6490114596621926,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 22,
+   "idx": 2900,
+   "m_s_start": 0.36304383186907246,
+   "kappa_start": 1.9219997735043317,
+   "gain_surrogate": 1.1100476400162704,
+   "gain_lever": 0.306546621807576,
+   "delta": 0.8035010182086944,
+   "best_ms_surrogate": 1.473091471885343,
+   "best_ms_lever": 0.6695904536766485,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 23,
+   "idx": 2555,
+   "m_s_start": 0.3697737969596172,
+   "kappa_start": 2.1818490746325563,
+   "gain_surrogate": 0.3866430402616675,
+   "gain_lever": 0.2131390742104211,
+   "delta": 0.1735039660512464,
+   "best_ms_surrogate": 0.7564168372212847,
+   "best_ms_lever": 0.5829128711700383,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 24,
+   "idx": 960,
+   "m_s_start": 0.37727674337130207,
+   "kappa_start": 2.0501541866594004,
+   "gain_surrogate": 0.5357832091439849,
+   "gain_lever": 0.432749623984442,
+   "delta": 0.10303358515954292,
+   "best_ms_surrogate": 0.913059952515287,
+   "best_ms_lever": 0.8100263673557441,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 25,
+   "idx": 1442,
+   "m_s_start": 0.38392867791059143,
+   "kappa_start": 1.968680201602025,
+   "gain_surrogate": 0.48354116788173646,
+   "gain_lever": 0.39808239672541584,
+   "delta": 0.08545877115632061,
+   "best_ms_surrogate": 0.8674698457923279,
+   "best_ms_lever": 0.7820110746360073,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 26,
+   "idx": 398,
+   "m_s_start": 0.3902825886305475,
+   "kappa_start": 2.0787283546728688,
+   "gain_surrogate": 0.6550464787829677,
+   "gain_lever": 0.3049476904831158,
+   "delta": 0.3500987882998519,
+   "best_ms_surrogate": 1.0453290674135152,
+   "best_ms_lever": 0.6952302791136633,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  },
+  {
+   "start_i": 27,
+   "idx": 2625,
+   "m_s_start": 0.39575810579185483,
+   "kappa_start": 2.084442656676433,
+   "gain_surrogate": 0.5458909196501001,
+   "gain_lever": 0.47494414561627746,
+   "delta": 0.0709467740338226,
+   "best_ms_surrogate": 0.9416490254419548,
+   "best_ms_lever": 0.8707022514081323,
+   "n_solves_surrogate": 18,
+   "n_solves_lever": 18
+  }
+ ],
+ "band": "R-REPLICATED",
+ "consequence": "the effect replicates under a clean fixed-n pre-registration; add as a second, independently pre-registered confirmatory result in draft \u00a75.1. MANDATORY DISCLOSURE: the comparator lever was chosen by best-of-8 selection on the PRIOR 56-start pool (never on this confirmatory cohort). Best-of-N selection on a finite noisy sample inflates the winner's apparent quality, so on a fresh cohort the comparator is expected to regress DOWNWARD -- i.e. the residual selection effect makes it slightly EASIER, not harder, for the surrogate to win here. This must be stated wherever the result is reported; the exploratory lever sweep measures whether the pre-named lever was in fact still the best realisable lever on this cohort.",
+ "reportable": true,
+ "disclosures": [
+  "MANDATORY DISCLOSURE: the comparator lever was chosen by best-of-8 selection on the PRIOR 56-start pool (never on this confirmatory cohort). Best-of-N selection on a finite noisy sample inflates the winner's apparent quality, so on a fresh cohort the comparator is expected to regress DOWNWARD -- i.e. the residual selection effect makes it slightly EASIER, not harder, for the surrogate to win here. This must be stated wherever the result is reported; the exploratory lever sweep measures whether the pre-named lever was in fact still the best realisable lever on this cohort.",
+  "MANDATORY DISCLOSURE: n=28 was sized against the historical 0.75-0.80 win rate, which comes from the very batches whose collection process is under dispute; a null at this n therefore cannot fully distinguish 'no effect' from 'a real but smaller-than-assumed effect'. The frozen power table records the de-circularised figure at a minimum useful rate of 0.65."
+ ]
+}
