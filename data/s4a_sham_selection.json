@@ -1,7 +1,7 @@
 {
  "unit": "S4a",
  "stage": "sham_selection",
- "amendment": "A1-12 (council-before, Sonnet F1)",
+ "amendment": "A1-12 (council-before, review finding F1)",
  "exploratory": true,
  "confirmatory": false,
  "rule": "the non-l_i descriptor whose median cos(full, masked) over the 20 starts is closest to l_i's -- i.e. perturbation-matched to the l_i ablation",

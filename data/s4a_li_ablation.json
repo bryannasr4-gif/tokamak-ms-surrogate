@@ -14,7 +14,7 @@
  "sham_selection": {
   "unit": "S4a",
   "stage": "sham_selection",
-  "amendment": "A1-12 (council-before, Sonnet F1)",
+  "amendment": "A1-12 (council-before, review finding F1)",
   "exploratory": true,
   "confirmatory": false,
   "rule": "the non-l_i descriptor whose median cos(full, masked) over the 20 starts is closest to l_i's -- i.e. perturbation-matched to the l_i ablation",
@@ -50,7 +50,7 @@
   }
  },
  "sham_material": false,
- "scope_note": "S4a arms A/B scope: l_i's contribution to gradient DIRECTION selection. The accept/reject gate always sees the true unmasked l_i, so no verdict here speaks to l_i's importance to the model in general (Sonnet F11).",
+ "scope_note": "S4a arms A/B scope: l_i's contribution to gradient DIRECTION selection. The accept/reject gate always sees the true unmasked l_i, so no verdict here speaks to l_i's importance to the model in general (review finding F11).",
  "zero_feat": "li",
  "zero_feat_i": 18,
  "budget": 18,

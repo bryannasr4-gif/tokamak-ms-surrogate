@@ -58,7 +58,7 @@ FINAL = os.path.join(ROOT, "data", "s3c_third_cohort.json")
 FINAL_LEV = os.path.join(ROOT, "data", "s3c_lever_sweep.json")
 NO_SCIENCE_BANDS = {"ATTRITION-VOID", "NO-DATA"}
 
-# Mandatory disclosures attached to the band consequences (amendment A1-14; Sonnet F4/F9).
+# Mandatory disclosures attached to the band consequences (amendment A1-14; review finding F4/F9).
 DISCLOSURE_WINNERS_CURSE = (
     "MANDATORY DISCLOSURE: the comparator lever was chosen by best-of-8 selection on the PRIOR "
     "56-start pool (never on this confirmatory cohort). Best-of-N selection on a finite noisy "
@@ -117,7 +117,7 @@ def stage_freeze():
     print("=" * 74)
     print("S3c STAGE 1 -- FREEZE THE PRE-REGISTRATION (before any data exists)")
     print("=" * 74)
-    # --- amendment A1-13 (Sonnet F2): a frozen prereg needs a durable anchor, not one file check
+    # --- amendment A1-13 (review finding F2): a frozen prereg needs a durable anchor, not one file check
     if os.path.exists(PREREG):
         print(f"  REFUSING: {PREREG} already exists -- a frozen prereg is never re-frozen.")
         return 2
@@ -134,7 +134,7 @@ def stage_freeze():
     qs = np.linspace(0.025, 0.975, N_COHORT)
     sel = sorted(set(int(round(q * (len(pool) - 1))) for q in qs))
     assert len(sel) >= N_COHORT, f"quantile collision: only {len(sel)} distinct positions"
-    # Sonnet F8: the 'verbatim stratify_new' claim is ASSERTED mechanically, not just in prose --
+    # review finding F8: the 'verbatim stratify_new' claim is ASSERTED mechanically, not just in prose --
     # recompute the selection with phase4_power_run's own expression and require identity.
     _qs = np.linspace(0.025, 0.975, N_COHORT)
     _sel = sorted(set(int(round(q * (len(pool) - 1))) for q in _qs))
@@ -236,7 +236,7 @@ def stage_freeze():
 
 
 def git_anchor_ok():
-    """A1-13 (Sonnet F2): the prereg must be committed to git and byte-identical to the committed
+    """A1-13 (review finding F2): the prereg must be committed to git and byte-identical to the committed
     blob -- a durable, append-only anchor outside the mutable working tree."""
     import subprocess as sp
     try:
@@ -326,7 +326,7 @@ def stage_analyze():
     print("=" * 74)
     print("S3c STAGE 3 -- THE SINGLE PRE-SPECIFIED TEST + AMENDED BAND CHAIN")
     print("=" * 74)
-    if not (os.path.exists(PREREG) and os.path.exists(RAW)):        # Sonnet F6
+    if not (os.path.exists(PREREG) and os.path.exists(RAW)):        # review finding F6
         json.dump(dict(unit="S3c", band="NO-DATA", reportable=False, confirmatory=True,
                        consequence="required input missing (prereg or raw results)"),
                   open(FINAL, "w"), indent=1)

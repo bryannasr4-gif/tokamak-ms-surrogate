@@ -261,7 +261,7 @@ grid **65×65**; **fix_n_vessel_modes=40**. Reference impl: `experiments/phase0_
 # PART B — Phase ledger (append one entry per completed phase)
 
 ### Scoping — GO-with-reframing — 2026-06-18 — DONE
-- **Did:** literature-first novelty scoping (multi-agent deep research) + empirical feasibility. Found Pertnet
+- **Did:** literature-first novelty scoping (structured literature review) + empirical feasibility. Found Pertnet
   (Kolemen's own group) scoops the broad claim; identified the surviving 4-part conjunction (A5).
 - **Result:** GO-with-reframing. Defensible novel sentence + positioning table in `SCOPING_vertical_stability.md`.
 - **Advice for next prompt:** never pitch "first ML/differentiable ST γ"; lead with the gradient-USED, m_s,

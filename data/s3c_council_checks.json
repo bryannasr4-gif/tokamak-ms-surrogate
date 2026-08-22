@@ -5,7 +5,7 @@
  "not_reportable_magnitudes": true,
  "new_solves": 0,
  "provenance": "computed from data/phase4_power3_results.json + data/phase4_power3_levers.json; no new solver runs; adjudication support for the council-after round data/research/council/s4a_s3c_result/",
- "purpose": "independently test three checkable council objections (CLAUDE.md section 6: a council finding is never adopted on trust)",
+ "purpose": "independently test three checkable council objections (the review protocol section 6: a council finding is never adopted on trust)",
  "bootstrap": {
   "n_boot": 20000,
   "seed": 20260802

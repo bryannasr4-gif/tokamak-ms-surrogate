@@ -3,7 +3,7 @@
 EXPLORATORY. confirmatory=false. Zero new solves: every number below is computed from data
 already on disk (the frozen confirmatory cohort + the A1-9 exploratory lever sweep).
 
-Purpose: the council-after raised three checkable objections. Per CLAUDE.md section 6 a council
+Purpose: the council-after raised three checkable objections. Per the review protocol section 6 a council
 finding is NEVER adopted on trust -- it is independently verified. These checks settle them:
 
   C1 (DeepSeek Q3, Nemotron Q3): "gap_outer- ranked 1 of 8, but the 1st-vs-2nd gap is smaller
@@ -129,7 +129,7 @@ out = dict(
     provenance="computed from data/phase4_power3_results.json + data/phase4_power3_levers.json; "
                "no new solver runs; adjudication support for the council-after round "
                "data/research/council/s4a_s3c_result/",
-    purpose="independently test three checkable council objections (CLAUDE.md section 6: a "
+    purpose="independently test three checkable council objections (the review protocol section 6: a "
             "council finding is never adopted on trust)",
     bootstrap=dict(n_boot=20000, seed=RNG_SEED),
     median_gain_by_method=med_gain, lever_ranking=order, runner_up=runner_up,

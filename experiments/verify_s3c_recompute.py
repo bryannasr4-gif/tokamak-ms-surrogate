@@ -1,6 +1,6 @@
 """verify_s3c_recompute.py -- INDEPENDENT fresh-agent VERIFY of unit S3c, from raw only.
 
-Per the D18 law (CLAUDE.md sec3 item 5 / sec6): every EXEC gets a paired VERIFY by a different
+Per the D18 law (the review protocol sec3 item 5 / sec6): every EXEC gets a paired VERIFY by a different
 agent, recomputing from raw artifacts -- never trusting the executor's own analysis JSON or
 report. This script does NOT import experiments/s3c_cohort_run.py; every check below is
 independently (re)implemented against:

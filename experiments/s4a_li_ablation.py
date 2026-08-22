@@ -49,7 +49,7 @@ NO_SCIENCE_BANDS = {"E-HARNESS-FAIL", "F-ATTRITION"}
 
 
 def stage_sham_select():
-    """Amendment A1-12 (Sonnet F1): freeze the SHAM control channel from GRADIENT GEOMETRY ALONE --
+    """Amendment A1-12 (review finding F1): freeze the SHAM control channel from GRADIENT GEOMETRY ALONE --
     no solver runs, no outcome data. Pick the non-l_i descriptor whose masking perturbs the ascent
     direction by the amount closest to l_i's, so the negative control is perturbation-matched."""
     import numpy as _np
@@ -84,7 +84,7 @@ def stage_sham_select():
     li_med = med[li_i]
     cand = sorted((abs(med[i] - li_med), i) for i in med if i != li_i)
     sham_i = cand[0][1]
-    out = dict(unit="S4a", stage="sham_selection", amendment="A1-12 (council-before, Sonnet F1)",
+    out = dict(unit="S4a", stage="sham_selection", amendment="A1-12 (council-before, review finding F1)",
                exploratory=True, confirmatory=False,
                rule="the non-l_i descriptor whose median cos(full, masked) over the 20 starts is "
                     "closest to l_i's -- i.e. perturbation-matched to the l_i ablation",
@@ -205,7 +205,7 @@ def boot_ci_median(x, n=BOOT_N, seed=BOOT_SEED):
 def analyse_arm(abl, bank, smoke_ok, sham_material=None):
     """Screen -> paired stats -> the AMENDED ordered band chain.
 
-    Every branch states its FULL condition explicitly (Sonnet F3): no band is reached by
+    Every branch states its FULL condition explicitly (review finding F3): no band is reached by
     elimination, and an unreachable-else canary fails loudly if a future edit reopens a gap.
     sham_material: True/False for the l_i arms (the A1-12 negative-control gate); None for the
     sham arm itself, which is not gated on itself."""
@@ -312,7 +312,7 @@ def stage_analyze():
     print("=" * 74)
     print("S4a STAGE 3 -- PAIRED ANALYSIS + AMENDED BAND CHAIN")
     print("=" * 74)
-    # Sonnet F6: never analyse missing or stale data by accident.
+    # review finding F6: never analyse missing or stale data by accident.
     for f in (RAW_OUT, SMOKE_OUT, SHAM_SEL):
         if not os.path.exists(f):
             json.dump(dict(unit="S4a", band="NO-DATA", reportable=False,
@@ -373,7 +373,7 @@ def stage_analyze():
                sham_material=sham_material,
                scope_note="S4a arms A/B scope: l_i's contribution to gradient DIRECTION selection. "
                           "The accept/reject gate always sees the true unmasked l_i, so no verdict "
-                          "here speaks to l_i's importance to the model in general (Sonnet F11).",
+                          "here speaks to l_i's importance to the model in general (review finding F11).",
                zero_feat="li", zero_feat_i=18, budget=18, ktol=KTOL, n_starts=N_STARTS,
                frozen=dict(alpha=ALPHA, materiality=MATERIALITY,
                            materiality_justification="below the measured ~10% marginal-band grid "
